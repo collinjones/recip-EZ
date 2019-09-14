@@ -1,5 +1,5 @@
 <?php
-
+echo "hello";
 include'login_config.php';
 session_start();
 
