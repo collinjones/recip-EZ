@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registration system using PHP & MySQL</title>
 </head>
 <body>
@@ -20,14 +21,14 @@
 			<tr>
 				<td>Password:</td>
 				<td>
-					<input type="password" name="password">
+					<input type="password" name="password_1">
 				</td>
 			</tr>
 
 			<tr>
 				<td>Confirm Password:</td>
 				<td>
-					<input type="password" name="confirm_pass">
+					<input type="password" name="password_2">
 				</td>
 			</tr>
 			<tr>

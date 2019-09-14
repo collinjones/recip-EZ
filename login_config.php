@@ -1,5 +1,4 @@
 <?php
-
 $servername = "us-cdbr-iron-east-02.cleardb.net";
 $username = "b8aa6613c91119";
 $password = "42249f92";

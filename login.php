@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -29,24 +33,53 @@
       h1{
          border: 2px solid Tomato;
          font-size: 300%;
-         width: 50%;
+         width: 35%;
       }
    </style>
 </head>
 
 <body>
    <h1 align="center">LOGIN PAGE</h1>
-
-   <form name="login_form" action="action.php" onsubmit="return validateForm()" method="post">
+   <form name="login_form" action="" onsubmit="return validateForm()" method="post">
       <input type="text" name="username" placeholder="Username"><br>
       <input type="password" name="password" placeholder="Password"><br>
-      <input type="submit" value="Submit">
-   </form>  
-
+      <input type="submit" name="send">
+   </form> 
+   <?php
+   if(isset($_GET['error'])==true){
+      echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
+   } 
+   ?>
    <p1>
       Want to sign up?<a href="registration_page.php">Click Here</a>
    </p1>
 
 </body>
-
 </html>
+
+<?php
+
+if(isset($_POST['send'])){
+   include'login_config.php';
+   $usr = $_POST["username"];
+   $pwd = $_POST["password"];
+   $errorMessage = "<span>Incorrect</span>";
+
+   //selecting info from database
+   $query = "SELECT * FROM users WHERE usernames='$usr' AND passwords = '$pwd' LIMIT 1";
+   $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+   $count = mysqli_num_rows($result);
+
+   //Check if equal 
+   if($count == 1){  
+     $_SESSION['loggedin'] = true;
+     $_SESSION['user'] = $usr;
+     header("Location: homepage.php");
+     exit; 
+   }
+   else{    
+     header("location:login.php?error=1");
+     exit;
+   }
+}
+?>
