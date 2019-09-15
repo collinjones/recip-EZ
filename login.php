@@ -30,24 +30,37 @@ session_start();
 	  }
 	}
 	</script>
+	<style>
+    table, th{
+      border-collapse:collapse;
+    }
+    </style>
 </head>
 <div align="center" class="container">
 	<div class="jumbotron">
 		<body>
-			<h1 align="center">Login</h1>
-			<form name="login_form" action="" onsubmit="return validateForm()" method="post">
-			  <input type="text" name="username" placeholder="Username"><br>
-			  <input type="password" name="password" placeholder="Password"><br>
-			  <input type="submit" class="btn btn-success" name="send">
-			</form> 
-			<?php
-			if(isset($_GET['error'])==true){
-			  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
-			} 
-			?>
-			<p1>
-			  Want to sign up?<a href="registration_page.php">Click Here</a>
-			</p1>
+			<table>
+				<h1 align="center">Login</h1>
+				<p1>
+				  Not a member?<a href="registration_page.php"> Sign Up</a>
+				</p1>
+				<form name="login_form" action="" onsubmit="return validateForm()" method="post">
+				  <tr>
+				  <th><input type="text" name="username" placeholder="Username"></th>
+				  </tr>
+				  <tr>
+				  <th><input type="password" name="password" placeholder="Password"></th>
+				  </tr>
+				  <tr>
+				  <th><input type="submit" class="btn btn-success" name="send"></th>
+				  </tr>
+				</form> 
+				<?php
+				if(isset($_GET['error'])==true){
+				  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
+				} 
+				?>
+			</table>
 		</body>
 	</div>
 </div>
