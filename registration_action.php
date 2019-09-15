@@ -42,7 +42,7 @@ if($count_errors == 0){
   mysqli_query($conn, $query);
   $_SESSION['user'] = $username;
   $_SESSION['success'] = "You are now logged in";
-  header('refresh:5; homepage.php');
+  header('Location: homepage.php');
   exit;
 }
 ?>
