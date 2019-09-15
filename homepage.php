@@ -18,19 +18,34 @@ include'session.php';
 	        margin-left: auto;
 	        margin-right: auto;
 	    }
+	    .navbar-brand
+		{
+		  font-size: 20px;
+		}
+	    .nav-item
+		{
+		  font-size: 20;
+		  padding: 0px 15px;
+		}
+		.nav .open > a:hover{
+       		background-color:#fff; 
+		}
+		.navbar .navbar-nav> li > a:hover{
+			background-color:#5c697d;
+		}
 	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-light bg-light">
-		<a href="#" class="navbar-brand">CSCI3308 Project</a>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<a href="homepage.php" class="navbar-brand">CSCI3308 Project</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
-				<li style="list-style-type: none;" class="nav-item"><a href="#" class="nav-link">Home</a></li>
-				<li style="list-style-type: none;" class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li style="list-style-type: none;" class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="logout.php" class="nav-link">Logout</a></li>
 			</ul>
 		</div>
 	</nav>

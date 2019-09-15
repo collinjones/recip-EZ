@@ -29,11 +29,11 @@ session_start();
             </tr>
 
             <tr>
-            	<th>Password:</th><th><input type="password" name="password_1"></th>
+            	<th>Password:</th><th><input type="password" name='password_1'></th>
             </tr>
 
             <tr>
-    	        <th>Confirm<br>Password:</th><th><input type="password" name="password_2"></th>
+    	        <th>Confirm<br>Password:</th><th><input type="password" name='password_2'></th>
             <tr>
                 <th>&nbsp;</th>
             	<th>
@@ -56,7 +56,7 @@ session_start();
             if(isset($_GET['error_match'])==true){
                 echo '<font color="#FF0000"><p> Username and Password cannot match! </p></font color>';
             }
-       		?>
+       		  ?>
 
             <p>
             Already a member?<a href="login.php">Sign In</a>
@@ -76,7 +76,9 @@ $errors = array();
 
 // check if user submitted register button
 if(isset($_POST['send'])){
-include'registration_action.php';
+  include'registration_action.php';
+  echo $username;
+  echo $password_1;
 }
 
 ?>

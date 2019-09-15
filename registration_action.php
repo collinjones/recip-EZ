@@ -1,8 +1,9 @@
 <?php
 include'connect.php';
-$username = mysqli_real_escape_string($conn, $_POST['username']);
-$password_1 = mysqli_real_escape_string($conn, $_POST['password_1']);
-$password_2 = mysqli_real_escape_string($conn, $_POST['password_2']);
+$username = $_POST['username'];
+$password_1 = $_POST['password_1'];
+$password_2 = $_POST['password_2'];
+$errors = array();
 
 if (empty($username)) { 
   header("location:registration_page.php?error_emptyUser=1");
@@ -16,7 +17,7 @@ if ($password_1 != $password_2) {
   header("location:registration_page.php?error_missmatch=1");
   exit;
 }
-if(strcmp($username, $password_1)){
+if ($username == $password_1){
   header("location:registration_page.php?error_match=1");
   exit;
 }
@@ -41,7 +42,7 @@ if($count_errors == 0){
   mysqli_query($conn, $query);
   $_SESSION['user'] = $username;
   $_SESSION['success'] = "You are now logged in";
-  header('location: homepage.php');
+  header('refresh:5; homepage.php');
   exit;
 }
 ?>
