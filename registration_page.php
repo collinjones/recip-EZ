@@ -10,31 +10,35 @@ session_start();
   <meta name="author" content="Collin Jones">
   <meta name="description" content="Sign Up for Project">
   <title>Sign Up</title>
+  <style>
+    table, th{
+      border-collapse:collapse;
+    }
+  </style>
 </head>
 <body>
   <div align="center" class="container">
     <div class="jumbotron">
-      <fieldset style="width:30%">
-        <table border="0">
+        <table>
             <h1>Register</h1>
 
             <form method="post" action="">
 
             <tr>
-                <td>Username:</td><td><input type="text" name="username"></td>
+                <th>Username:</th><th><input type="text" name="username"></th>
             </tr>
 
             <tr>
-            	<td>Password:</td><td><input type="password" name="password_1"></td>
+            	<th>Password:</th><th><input type="password" name="password_1"></th>
             </tr>
 
             <tr>
-    	        <td>Confirm Password:</td><td><input type="password" name="password_2"></td>
+    	        <th>Confirm<br>Password:</th><th><input type="password" name="password_2"></th>
             <tr>
-                <td>&nbsp;</td>
-            	<td>
+                <th>&nbsp;</th>
+            	<th>
                   <input type="submit" class="btn btn-success" name="send">
-            	</td>
+            	</th>
           	</tr>
             <?php
        			if(isset($_GET['error_emptyUser'])==true){
@@ -60,7 +64,6 @@ session_start();
 
             </form>
         	</table>
-        </fieldset>
       </div>
     </div>
 </body>
