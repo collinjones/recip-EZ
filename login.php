@@ -8,10 +8,12 @@ session_start();
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="css" href="css/navbar.css">
 	<meta name="author" content="Collin Jones">
 	<meta name="description" content="Login Page for Project">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+
 	<title> Log In </title>
 	<script>
 	function validateForm() {
@@ -45,6 +47,7 @@ session_start();
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="registration_page.php" class="nav-link">Create Account</a></li>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
 			</ul>
@@ -57,9 +60,6 @@ session_start();
 		<div class="jumbotron">
 			<table>
 				<h1 align="center">Login</h1>
-				<p1>
-				  Not a member?<a href="registration_page.php"> Sign Up</a>
-				</p1>
 				<form name="login_form" action="" onsubmit="return validateForm()" method="post">
 				  <tr>
 				  <th><input type="text" name="username" placeholder="Username"></th>
