@@ -94,6 +94,7 @@ session_start();
 		</div>
 	</div>
 
+<<<<<<< HEAD
    <!--=====FOOTER=====-->
    <div class ="footer">
       <div class="column"></div>
@@ -102,6 +103,8 @@ session_start();
       <p> WOW! </p>
    </div>
 
+=======
+>>>>>>> c7deb4b091f2cf52799fbea323d4073a19a064c0
 </body>
 </html>
 
