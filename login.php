@@ -12,7 +12,8 @@ session_start();
 	<meta name="description" content="Login Page for Project">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">	
+	<link rel="stylesheet" type="text/css" href="layout.css">
 
 	<title> Log In </title>
 	<script>
@@ -36,14 +37,6 @@ session_start();
 	<style>
    table, th{
       border-collapse:collapse;
-   }
-   .footer {
-   background-color: #333333;
-   position : fixed;
-   width: 100%;
-   height: 20%;
-   border-top: 3px solid #111111;
-   overflow: auto;
    }
    </style>
 </head>
@@ -94,17 +87,15 @@ session_start();
 		</div>
 	</div>
 
-<<<<<<< HEAD
    <!--=====FOOTER=====-->
-   <div class ="footer">
-      <div class="column"></div>
-      <p> WOW! </p>
-      <div class="column"></div>
-      <p> WOW! </p>
-   </div>
+    <footer class ="footer">
+		<div class="container"></div>
+			<div class="footer">
+				<span class="text-muted"> Created by Team 1</span>
+			</div>
+		</div>
+   	</footer>
 
-=======
->>>>>>> c7deb4b091f2cf52799fbea323d4073a19a064c0
 </body>
 </html>
 

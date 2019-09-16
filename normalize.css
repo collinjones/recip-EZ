@@ -1,0 +1,23 @@
+/*NAVBAR NORMALIZATION*/
+
+/* Font size for Brand Logo */
+.navbar-brand
+{
+	font-size: 20px;
+}
+
+/*Individual items of the navbar*/
+.nav-item
+{
+	font-size: 20;
+	padding: 0px 15px;
+}
+
+/*Changes background color of navbar elements*/
+.nav .open > a:hover{
+	background-color:#fff; 
+}
+/*Changes color of navbar text*/
+.navbar .navbar-nav> li > a:hover{
+	background-color:#5c697d;
+}
