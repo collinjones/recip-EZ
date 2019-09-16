@@ -7,7 +7,7 @@ session_start();
 
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Collin Jones">
 	<meta name="description" content="Login Page for Project">
 
@@ -34,12 +34,27 @@ session_start();
 	}
 	</script>
 	<style>
-    table, th{
+   table, th{
       border-collapse:collapse;
-    }
-    </style>
+   }
+   .footer {
+   background-color: #333333;
+   position : fixed;
+   width: 100%;
+   height: 20%;
+   border-top: 3px solid #111111;
+   overflow: auto;
+   }
+   </style>
 </head>
+
 <body>
+
+   <!--=====================NAVBAR====================-->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 		<a href="homepage.php" class="navbar-brand">CSCI3308 Project</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
@@ -53,9 +68,8 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+   <!--=====================CONTENT====================-->
 	<div align="center" class="container">
 		<div class="jumbotron">
 			<table>
@@ -79,6 +93,15 @@ session_start();
 			</table>
 		</div>
 	</div>
+
+   <!--=====FOOTER=====-->
+   <div class ="footer">
+      <div class="column"></div>
+      <p> WOW! </p>
+      <div class="column"></div>
+      <p> WOW! </p>
+   </div>
+
 </body>
 </html>
 
