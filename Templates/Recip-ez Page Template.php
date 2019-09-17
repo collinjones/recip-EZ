@@ -1,5 +1,5 @@
 <?php
-include'session.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -51,22 +51,13 @@ include'session.php';
 
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 		<a href="homepage.php" class="navbar-brand">Recip-Ez</a>
-		<?php 
-			if(isset($_SESSION["loggedin"])){
-				echo '<span style="color:green"> Logged In </span>';
-			}
-			else{
-				echo '<span style="color:red"> Logged Out </span>';
-			}
-		?>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="logout.php" class="nav-link">Log Out</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="registration_page.php" class="nav-link">Home</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="registration_page.php" class="nav-link">About Us</a></li>
 			</ul>
 		</div>
 	</nav>

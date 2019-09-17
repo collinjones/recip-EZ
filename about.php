@@ -1,7 +1,6 @@
-<?php
+<?php 
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -42,7 +41,7 @@ session_start();
 	</style>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
-<body>
+<body onload="logged();">
 
    <!-- Navbar -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -50,7 +49,15 @@ session_start();
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-		<a href="homepage.php" class="navbar-brand">CSCI3308 Project</a>
+		<a href="homepage.php" class="navbar-brand">Recip-Ez</a>
+		<?php 
+			if(isset($_SESSION["loggedin"])){
+				echo '<span style="color:green"> Logged In </span>';
+			}
+			else{
+				echo '<span style="color:red"> Logged Out </span>';
+			}
+		?>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -58,20 +65,30 @@ session_start();
 			<ul class="navbar-nav ml-auto">
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="logout.php" class="nav-link">Logout</a></li>
+				<?php 
+					if(isset($_SESSION["loggedin"])){
+						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="logout.php" class="nav-link">Log Out</a></li>';
+					}
+					else{
+						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log In</a></li>';
+					}
+				?>
 			</ul>
 		</div>
 	</nav>
 
-	<!-- Footer -->
-	<div class="footer">
-		<font color="grey">Created by Team 1</font></div>
+
+	<!-- 100% Height of browser -->
+	<div id="container">
+		<!-- Content of website -->
+		<div id="main">
+
+		</div>
+	</div>
+	<!-- Gets pushed down -->
+	<footer id="footer">
+		<span id="footer">Created by Team 1</span>
+	</footer>
 
 </body>
 </html>
-
-<?php
-if(isset($_POST['send'])){
-	include'login_action.php';
-}
-?>

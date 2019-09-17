@@ -9,26 +9,33 @@ html {
   height: 100%;
   box-sizing: border-box;
 }
-
-/* Create two equal columns that floats next to each other */
 .column {
 	float: left;
 	width: 50%;
 	padding: 15px;
 }
-.container{
-    width: 80%;
+#container{
+    min-height: 100%;
     margin: 0 auto; /* Center the DIV horizontally */
 }
-
-
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
+#main{
+  overflow: auto;
+  padding-bottom: 50px;
+}
+/*For use with text inside footer*/
+#footer{
+  color: #5e5e5e;
+}
+footer {
+  background-color: #bfbfbf;
+  padding: 15px;
   text-align: left;
-  text-decoration-color: #525252;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+*{
+  margin: 0px;
+  padding: 0;
 }

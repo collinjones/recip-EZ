@@ -50,46 +50,62 @@ session_start();
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-		<a href="homepage.php" class="navbar-brand">CSCI3308 Project</a>
+		<a href="homepage.php" class="navbar-brand">Recip-Ez</a>
+		<?php 
+			if(isset($_SESSION["loggedin"])){
+				echo '<span style="color:green"> Logged In </span>';
+			}
+			else{
+				echo '<span style="color:red"> Logged Out </span>';
+			}
+		?>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="registration_page.php" class="nav-link">Create Account</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
 			</ul>
 		</div>
 	</nav>
 
-   <!-- Log in UI -->
-	<div align="center" class="container">
-		<div class="jumbotron">
-			<table>
-				<h1 align="center">Login</h1>
-				<form name="login_form" action="" onsubmit="return validateForm()" method="post">
-				  <tr>
-				  <th><input type="text" name="username" placeholder="Username"></th>
-				  </tr>
-				  <tr>
-				  <th><input type="password" name="password" placeholder="Password"></th>
-				  </tr>
-				  <tr>
-				  <th><input type="submit" class="btn btn-success" name="send"></th>
-				  </tr>
-				</form> 
-				<?php
-				if(isset($_GET['error'])==true){
-				  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
-				} 
-				?>
-			</table>
+
+	<!-- 100% Height of browser -->
+	<div id="container">
+		<!-- Content of website -->
+		<div id="main">
+		   <!-- Log in UI -->
+			<div align="center" class="container">
+				<div class="jumbotron">
+					<table>
+						<h1 align="center">Login</h1>
+						<form name="login_form" action="" onsubmit="return validateForm()" method="post">
+						  <tr>
+						  <th><input type="text" name="username" placeholder="Username"></th>
+						  </tr>
+						  <tr>
+						  <th><input type="password" name="password" placeholder="Password"></th>
+						  </tr>
+						  <tr>
+						  <th><input type="submit" class="btn btn-success" name="send"></th>
+						  </tr>
+						</form> 
+						<?php
+						if(isset($_GET['error'])==true){
+						  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
+						} 
+						?>
+					</table>
+				</div>
+			</div>
+
 		</div>
 	</div>
-
-	<!-- Footer -->
-	<div class="footer">
-		<font color="grey">Created by Team 1</font>
-	</div>
+	<!-- Gets pushed down -->
+	<footer id="footer">
+		<span id="footer">Created by Team 1</span>
+	</footer>
 
 </body>
 </html>
