@@ -61,7 +61,11 @@ session_start();
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
+				<?php
+					if(isset($_SESSION["loggedin"])){
+						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>';
+					} 
+				?>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
 
 				<!-- Updates Log In / Log Out link based user logged in status -->

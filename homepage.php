@@ -44,7 +44,6 @@ include'session.php';
 <!------------ CONTENT STARTS HERE --------------->
 <body>
 
-
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -71,15 +70,24 @@ include'session.php';
 		</div>
 	</nav>
 
-
 	<!-- MIDDLE CONTENT -->
 	<div id="container">
-		<!-- CONTAINER CONTENT -->
-		<div id="main">
-			<!-- PUT CONTENT HERE -->
+		<div class="container">
+		  <div class="row">
+		    <div class="col-sm">
+		      COL 1
+		    </div>
+		    <div class="col-sm">
+		      COL 2
+		    </div>
+		    <div class="col-sm">
+		      COL 3
+		    </div>
+		  </div>
 		</div>
+</div><!-- row -->
 	</div>
-	
+
 	<!-- FOOTER -->
 	<footer id="footer">
 		<span id="footer">

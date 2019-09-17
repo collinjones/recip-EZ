@@ -27,12 +27,12 @@ table, th{
 }
 .column {
 	float: left;
-	width: 50%;
-	padding: 15px;
+	width: 33.33%;
+	padding: 30px;
 }
 #container{
     min-height: 100%;
-    margin: 0 auto; /* Center the DIV horizontally */
+    margin: 10px 10px; /* Center the DIV horizontally */
 }
 #main{
   overflow: auto;
