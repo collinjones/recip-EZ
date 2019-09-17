@@ -4,16 +4,18 @@ include'session.php';
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Collin Jones">
-	<meta name="description" content="Homepage of project">
+	<meta name="description" content="Homepage">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
-	
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+
 	<title>Homepage</title>
+	
 	<style>
 	    img{
 	        display: block;
@@ -21,8 +23,11 @@ include'session.php';
 	        margin-right: auto;
 	    }
 	</style>
+
 </head>
+<!-------- CONTENT STARTS HERE --------------->
 <body>
+	<!-- Navbar UI -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 		<a href="homepage.php" class="navbar-brand">CSCI3308 Project</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">

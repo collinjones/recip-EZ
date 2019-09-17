@@ -87,14 +87,7 @@ session_start();
 		</div>
 	</div>
 
-   <!--=====FOOTER=====-->
-    <footer class ="footer">
-		<div class="container"></div>
-			<div class="footer">
-				<span class="text-muted"> Created by Team 1</span>
-			</div>
-		</div>
-   	</footer>
+	<div class="footer"><font color="grey">Created by Team 1</font></div>
 
 </body>
 </html>

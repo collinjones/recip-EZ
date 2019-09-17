@@ -14,29 +14,32 @@ session_start();
   <link rel="stylesheet" type="text/css" href="normalize.css">
 
   <title>Sign Up</title>
+
   <style>
     table, th{
       border-collapse:collapse;
     }
   </style>
+  
 </head>
+<!-------- CONTENT STARTS HERE --------------->
 <body>
   <!-- Navbar UI -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a href="homepage.php" class="navbar-brand">CSCI3308 Project</a>
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+      <a href="homepage.php" class="navbar-brand">CSCI3308 Project</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="navbar-nav ml-auto">
         <li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log in</a></li>
         <li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
       </ul>
-    </div>
-  </nav>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   <!-- Create Account UI -->
   <div align="center" class="container">
