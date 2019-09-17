@@ -4,23 +4,23 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Collin Jones">
-  <meta name="description" content="Sign Up for Project">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="author" content="Collin Jones">
+    <meta name="description" content="Sign Up for Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="layout.css">
-  <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
 
-  <title>Sign Up</title>
+    <title>Sign Up</title>
 
-  <style>
+    <style>
     table, th{
-      border-collapse:collapse;
+    border-collapse:collapse;
     }
-  </style>
-  
+    </style>
+
 </head>
 <!-------- CONTENT STARTS HERE --------------->
 <body>
@@ -88,11 +88,15 @@ session_start();
         	</table>
       </div>
     </div>
+
+    <div class="footer">
+    <font color="grey">Created by Team 1</font>
+  </div>
 </body>
 </html>
 
 <?php
-// 
+
 $username = "";
 $errors = array();
 if(isset($_POST['send'])){

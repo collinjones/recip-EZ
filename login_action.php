@@ -8,9 +8,10 @@ $pwd = $_POST['password'];
 $query = "SELECT * FROM users WHERE usernames='$usr' LIMIT 1";
 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $count = mysqli_num_rows($result);
-//$hashed = password_hash($pwd, PASSWORD_DEFAULT);
+
 //Check if equal 
-if($count == 1){ // User found 
+if($count == 1){ 
+	
 	$userRow = mysqli_fetch_assoc($result);
 	$hashedPass = $userRow['passwords'];
 	if(password_verify($pwd, $hashedPass)){
