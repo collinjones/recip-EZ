@@ -62,6 +62,7 @@ if($eflag == false){
   mysqli_query($conn, $query);
 
   // set the session user and redirect to homepage
+  $_SESSION['loggedin'] = true;
   $_SESSION['user'] = $username;
   header('Location: homepage.php');
   exit;

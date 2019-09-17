@@ -44,13 +44,15 @@ session_start();
 <!------------ CONTENT STARTS HERE --------------->
 <body>
 
-   <!-- Navbar -->
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<a href="homepage.php" class="navbar-brand">Recip-Ez</a>
+
+		<!-- Sets the logged status text color -->
 		<?php 
 			if(isset($_SESSION["loggedin"])){
 				echo '<span style="color:green"> Logged In </span>';
@@ -71,9 +73,9 @@ session_start();
 	</nav>
 
 
-	<!-- 100% Height of browser -->
-	<div id="container">
-		<!-- Content of website -->
+	<!-- MIDDLE SECTION -->
+	<div class="container">
+		<!-- CONTAINER CONTENT -->
 		<div id="main">
 		   <!-- Log in UI -->
 			<div align="center" class="container">
@@ -99,12 +101,14 @@ session_start();
 					</table>
 				</div>
 			</div>
-
 		</div>
 	</div>
-	<!-- Gets pushed down -->
+
+	<!-- FOOTER -->
 	<footer id="footer">
-		<span id="footer">Created by Team 1</span>
+		<span id="footer">
+			&copy; 2019 Team One
+		</span>
 	</footer>
 
 </body>

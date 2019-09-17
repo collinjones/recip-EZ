@@ -9,6 +9,22 @@ html {
   height: 100%;
   box-sizing: border-box;
 }
+footer {
+  background-color: #bfbfbf;
+  padding: 15px;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+table, th{
+  border-collapse: collapse;
+}
+*{
+  margin: 0px;
+  padding: 0;
+}
 .column {
 	float: left;
 	width: 50%;
@@ -25,17 +41,4 @@ html {
 /*For use with text inside footer*/
 #footer{
   color: #5e5e5e;
-}
-footer {
-  background-color: #bfbfbf;
-  padding: 15px;
-  text-align: left;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-*{
-  margin: 0px;
-  padding: 0;
 }
