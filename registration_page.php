@@ -111,7 +111,6 @@
 <?php
 
     $username = "";
-    $errors = array();
     if(isset($_POST['send'])){
         include'registration_action.php';
     }

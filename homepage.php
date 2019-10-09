@@ -1,5 +1,6 @@
 <?php
 include'session.php';
+include'IngredientCodes.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,30 +16,14 @@ include'session.php';
 	<link rel="stylesheet" type="text/css" href="normalize.css">	
 	<link rel="stylesheet" type="text/css" href="layout.css">
 
-	<title> Log In </title>
-	<script>
-		// Error checking popup script
-		function validateForm() {
-			var formUsr = document.forms["login_form"]["username"].value;
-			var formPwd = document.forms["login_form"]["password"].value;
-			if (formUsr == "" && formPwd == "") {
-				alert("Please enter a username and password");
-				return false;
-			}
-			else if (formUsr == ""){
-				alert("Please enter a username");
-				return false;
-			}
-			else if (formPwd == ""){
-				alert("Please enter a password");
-				return false;
-			}
-		}
-	</script>
+	<title> Homepage </title>
 	<style>
-	table, th{
-	border-collapse:collapse;
-	}
+		table, th{
+			border-collapse:collapse;
+		}
+		.form-row {
+			max-width: 500px;
+		}
 	</style>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
@@ -71,21 +56,81 @@ include'session.php';
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
-	<div id="container">
-		<div class="container">
-		  <div class="row">
-		    <div class="col-sm">
-		      COL 1
-		    </div>
-		    <div class="col-sm">
-		      COL 2
-		    </div>
-		    <div class="col-sm">
-		      COL 3
-		    </div>
-		  </div>
+	<div class="container">
+		<div class="row">
+			<form method="get">
+				<!-- SEARCH -->
+				<div class="form-row" style="padding: 20px">	
+					<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
+				</div>
+				<!-- MEATS SELECTIONS -->
+				<label>Meats</label><br>
+				<div class="form-row">
+					<div class="form-column" style="padding: 5px">
+						<button name="1" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Steak
+						</button>
+					</div>
+					<div class="form-column" style="padding: 5px">
+						<button name="2" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Chicken
+						</button>
+					</div>
+					<div name="3" class="form-column" style="padding: 5px">
+						<button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Salmon
+						</button>
+					</div>		
+					<div name="4" class="form-column" style="padding: 5px">
+						<button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Pork
+						</button>
+					</div>
+				</div>
+				<!-- VEGETABLES SELECTIONS -->
+				<label>Vegetables</label><br>
+				<div class="form-row">
+					<div class="form-column" style="padding: 5px">
+						<button name="5" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Green Beens
+						</button>
+					</div>
+					<div class="form-column" style="padding: 5px">
+						<button name="6" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Brussel Sprouts
+						</button>
+					</div>
+					<div class="form-column" style="padding: 5px">
+						<button name="7" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Zuccinni
+						</button>
+					</div>
+					<div class="form-column" style="padding: 5px">
+						<button name="8" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Eggplant
+						</button>
+					</div>
+				</div>
+				<!-- SPICES SELECTIONS -->
+				<label>Spices</label><br>
+				<div class="form-row">
+					<div class="form-column" style="padding: 5px">
+						<button name="9" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Salt
+						</button>
+					</div>
+					<div class="form-column" style="padding: 5px">
+						<button name="10" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Pepper
+						</button>
+					</div>
+				</div>
+				<br>
+				<div class="form-row">
+					<button name="send" type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
 		</div>
-</div><!-- row -->
 	</div>
 
 	<!-- FOOTER -->
@@ -97,3 +142,9 @@ include'session.php';
 
 </body>
 </html>
+
+<?php
+    if(isset($_GET['send'])){
+        include'homepage_action.php';
+    }
+?>

@@ -16,6 +16,10 @@ $password_2 = $_POST['password_2'];
     * Cannot have empty password
     * Password confirmation must match
     * Username cannot be the same as password
+
+    All this does is set the heading of the website. In 
+      registration_page.php, if it catches that any of 
+      these were set, it will throw an error. 
 */
 if (empty($username)) { 
   $eflag = true;

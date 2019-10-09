@@ -1,6 +1,6 @@
 <?php
 //This is a list of all the ingredients that we currently support in recip-EZ.
-//To access these variables just use: include "IngredientCodes.php"
+//To access these variables just use: include "IngredientCodes.php";
 //You should be able to use any of the variables as if they were in your php file originally.
 //Do NOT change ingredient code values!!! They corrospond to ingredients in the DB!!
 
