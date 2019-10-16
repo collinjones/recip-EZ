@@ -1,6 +1,5 @@
 <?php
-include'session.php';
-include'IngredientCodes.php';
+	include'session.php';
 ?>
 
 <!DOCTYPE html>
@@ -58,79 +57,81 @@ include'IngredientCodes.php';
 	<!-- MIDDLE CONTENT -->
 	<div class="container">
 		<div class="row">
-			<form method="get">
+			<form method="post" action="">
 				<!-- SEARCH -->
 				<div class="form-row" style="padding: 20px">	
 					<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
 				</div>
 				<!-- MEATS SELECTIONS -->
-				<label>Meats</label><br>
-				<div class="form-row">
+				<div style="padding: 20px" class="form-row">
 					<div class="form-column" style="padding: 5px">
-						<button name="1" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Steak
-						</button>
+						<input name='check_list[]' value='1' type="checkbox">Steak
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<button name="2" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Chicken
-						</button>
+						<input name='check_list[]' value='2' type="checkbox">Chicken
 					</div>
-					<div name="3" class="form-column" style="padding: 5px">
-						<button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Salmon
-						</button>
+					<div class="form-column" style="padding: 5px">
+						<input name='check_list[]' value='3' type="checkbox">Salmon
 					</div>		
-					<div name="4" class="form-column" style="padding: 5px">
-						<button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Pork
-						</button>
+					<div class="form-column" style="padding: 5px">
+						<input name='check_list[]' value='4' type="checkbox">Pork
 					</div>
 				</div>
 				<!-- VEGETABLES SELECTIONS -->
-				<label>Vegetables</label><br>
-				<div class="form-row">
+				<div style="padding: 20px" class="form-row">
 					<div class="form-column" style="padding: 5px">
-						<button name="5" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Green Beens
-						</button>
+						<input name='check_list[]' value='5' type="checkbox">Green Beans
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<button name="6" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Brussel Sprouts
-						</button>
+						<input name='check_list[]' value='6' type="checkbox">Brussel Sprouts
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<button name="7" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Zuccinni
-						</button>
+						<input name='check_list[]' value='7' type="checkbox">Zuccinni
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<button name="8" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Eggplant
-						</button>
+						<input name='check_list[]' value='8' type="checkbox">Eggplant
 					</div>
 				</div>
 				<!-- SPICES SELECTIONS -->
-				<label>Spices</label><br>
-				<div class="form-row">
+				<div style="padding: 20px" class="form-row">
 					<div class="form-column" style="padding: 5px">
-						<button name="9" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Salt
-						</button>
+						<input name='check_list[]' value='9' type="checkbox">Salt
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<button name="10" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Pepper
-						</button>
+						<input name='check_list[]' value='10' type="checkbox">Pepper
 					</div>
 				</div>
-				<br>
+				<div class="form-row" style="padding: 20px">
+					<div class="dropdown">
+					  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Dropdown button
+					  	</button>
+					  	<div style="width:auto"class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					  		<input name='exclusion_list[]' value='1' type="checkbox">
+					  		Steak
+					  		<input name='exclusion_list[]' value='2' type="checkbox">Chicken
+					  		<input name='exclusion_list[]' value='3' type="checkbox">Salmon
+					  		<input name='exclusion_list[]' value='4' type="checkbox">
+					  		Pork
+					  		<input name='exclusion_list[]' value='5' type="checkbox">Green Beans
+					  		<input name='exclusion_list[]' value='6' type="checkbox">Brussel Sprouts
+					  		<input name='exclusion_list[]' value='7' type="checkbox">Zuccinni
+					  		<input name='exclusion_list[]' value='8' type="checkbox">
+					  		Eggplant
+					  		<input name='exclusion_list[]' value='9' type="checkbox">
+					  		Salt
+					  		<input name='exclusion_list[]' value='10' type="checkbox">
+					  		Pepper
+					  	</div>
+					</div>
+				</div>
 				<div class="form-row">
-					<button name="send" type="submit" class="btn btn-primary">Submit</button>
+					<div class="col text-center">
+						<button name="send" type="submit" class="btn btn-primary center-block">Submit</button>
+					</div>
 				</div>
 			</form>
-		</div>
+		</div>	
 	</div>
 
 	<!-- FOOTER -->
@@ -144,7 +145,7 @@ include'IngredientCodes.php';
 </html>
 
 <?php
-    if(isset($_GET['send'])){
-        include'homepage_action.php';
-    }
+	if(isset($_POST['send'])){
+		include'homepage_action.php';
+	}
 ?>
