@@ -1,5 +1,5 @@
 <?php
-	include'session.php';
+	include'actions/session_action.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +12,8 @@
 	<meta name="description" content="Login Page for Project">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="normalize.css">	
-	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 
 	<title> Homepage </title>
 	<style>
@@ -49,7 +49,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="logout.php" class="nav-link">Log Out</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="actions/logout_action.php" class="nav-link">Log Out</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -136,9 +136,9 @@
 
 	<!-- FOOTER -->
 	<footer id="footer">
-		<span id="footer">
-			&copy; 2019 Team One
-		</span>
+		<div id="container">
+			<span>&copy; 2019 Team One</span>
+		</div>
 	</footer>
 
 </body>

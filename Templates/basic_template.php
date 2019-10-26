@@ -37,7 +37,7 @@ session_start();
 	</script>
 	<style>
 	table, th{
-		border-collapse:collapse;
+	border-collapse:collapse;
 	}
 	</style>
 </head>

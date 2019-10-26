@@ -1,6 +1,6 @@
 <?php
 	include'IngredientCodes.php';
-	include'connect.php';
+	include'connect_action.php';
 
 	$ingredient_array = array();
 	$exclusions_array = array();

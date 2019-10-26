@@ -1,5 +1,5 @@
 <?php
-    include'connect.php';
+    include'connect_action.php';
     // error check flag
     $eflag = false;
 

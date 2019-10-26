@@ -3,5 +3,5 @@
 	unset($_SESSION['user']);
 	session_destroy();
 	echo "Logging out...";
-	header("Location: login.php");
+	header("Location: ../login.php");
 ?>

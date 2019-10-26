@@ -1,5 +1,5 @@
 <?php
-session_start();
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +12,8 @@ session_start();
 	<meta name="description" content="Login Page for Project">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="normalize.css">	
-	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 
 	<title> Log In </title>
 	<script>
@@ -37,7 +37,7 @@ session_start();
 	</script>
 	<style>
 	table, th{
-	border-collapse:collapse;
+		border-collapse:collapse;
 	}
 	</style>
 </head>
@@ -71,42 +71,38 @@ session_start();
 		</div>
 	</nav>
 
-	<!-- MIDDLE SECTION -->
-	<div id="container">
-		<!-- CONTAINER CONTENT -->
-		<div id="main">
-		   <!-- Log in UI -->
-			<div align="center" class="container">
-				<div class="jumbotron">
-					<table>
-						<h1 align="center">Login</h1>
-						<form name="login_form" action="" onsubmit="return validateForm()" method="post">
-						  <tr>
-						  <th><input type="text" name="username" placeholder="Username"></th>
-						  </tr>
-						  <tr>
-						  <th><input type="password" name="password" placeholder="Password"></th>
-						  </tr>
-						  <tr>
-						  <th><input type="submit" class="btn btn-success" name="send"></th>
-						  </tr>
-						</form> 
-						<?php
-						if(isset($_GET['error'])==true){
-						  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
-						} 
-						?>
-					</table>
-				</div>
-			</div>
+   <!-- Log in UI -->
+	<div class="container">
+		<div class="container login-container">
+            <div class="row">
+                <div style="background-image: url('../resources/img/gradient.png')" class="col-md-6 login-form-1">
+                    <h3>Login</h3>
+                    <form onsubmit="return validateForm()" action="" name="login_form" method="post">
+                        <div class="form-group">
+                            <input name="username" type="text" class="form-control" placeholder="username" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input name="password" type="password" class="form-control" placeholder="password" value="" />
+                        </div>
+                        <div style="text-align:center" class="form-group">
+                            <input name="send" type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                    </form>
+                </div>
+            </div>
 		</div>
 	</div>
+	<?php
+		if(isset($_GET['error'])==true){
+		  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
+		} 
+	?>
 
 	<!-- FOOTER -->
 	<footer id="footer">
-		<span id="footer">
-			&copy; 2019 Team One
-		</span>
+		<div id="container">
+			<span>&copy; 2019 Team One</span>
+		</div>
 	</footer>
 
 </body>
@@ -114,6 +110,6 @@ session_start();
 
 <?php
 if(isset($_POST['send'])){
-	include'login_action.php';
+	include'actions/login_action.php';
 }
 ?>

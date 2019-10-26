@@ -1,5 +1,5 @@
 <?php
-include'connect.php';
+include'actions/connect_action.php';
 
 $usr = $_POST['username'];
 $pwd = $_POST['password'];
@@ -21,7 +21,7 @@ if($count == 1){
 		exit; 
 	}
 	else{    
-		header("Location: login.php?error=1");
+		header("Location: ../login.php?error=1");
 		exit;		
 	}
 }

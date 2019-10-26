@@ -1,0 +1,65 @@
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+footer {
+  background-color: #bfbfbf;
+  padding: 8px;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+table, th{
+  border-collapse: collapse;
+}
+*{
+  margin: 0px;
+  padding: 0;
+}
+#container{
+    min-height: 100%;
+}
+#main{
+  overflow: auto;
+  padding-bottom: 50px;
+}
+/*For use with text inside footer*/
+#footer{
+  color: #5e5e5e;
+}
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    margin: 0 auto;
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+	session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -11,8 +11,8 @@ session_start();
 	<meta name="description" content="Login Page for Project">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="normalize.css">	
-	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 
 	<title> Log In </title>
 	<script>
@@ -71,7 +71,7 @@ session_start();
 				<!-- Updates Log In / Log Out link based user logged in status -->
 				<?php 
 					if(isset($_SESSION["loggedin"])){
-						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="logout.php" class="nav-link">Log Out</a></li>';
+						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="actions/logout_action.php" class="nav-link">Log Out</a></li>';
 					}
 					else{
 						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log In</a></li>';
@@ -90,9 +90,9 @@ session_start();
 
 	<!-- FOOTER -->
 	<footer id="footer">
-		<span id="footer">
-			&copy; 2019 Team One
-		</span>
+		<div id="container">
+			<span>&copy; 2019 Team One</span>
+		</div>
 	</footer>
 
 </body>
