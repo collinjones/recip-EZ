@@ -42,7 +42,7 @@
 	</style>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
-<body>
+<body background="../resources/img/gradient2.img">
 
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -87,16 +87,17 @@
                         <div style="text-align:center" class="form-group">
                             <input name="send" type="submit" class="btnSubmit" value="Login" />
                         </div>
+						<?php
+							if(isset($_GET['error'])==true){
+							  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
+							} 
+						?>
                     </form>
                 </div>
             </div>
 		</div>
 	</div>
-	<?php
-		if(isset($_GET['error'])==true){
-		  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
-		} 
-	?>
+
 
 	<!-- FOOTER -->
 	<footer id="footer">

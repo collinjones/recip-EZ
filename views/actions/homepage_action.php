@@ -1,5 +1,4 @@
 <?php
-	include'IngredientCodes.php';
 	include'connect_action.php';
 
 	$ingredient_array = array();

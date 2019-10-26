@@ -104,7 +104,7 @@
 				<div class="form-row" style="padding: 20px">
 					<div class="dropdown">
 					  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Dropdown button
+					    	Exlusions
 					  	</button>
 					  	<div style="width:auto"class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					  		<input name='exclusion_list[]' value='1' type="checkbox">
@@ -146,6 +146,6 @@
 
 <?php
 	if(isset($_POST['send'])){
-		include'homepage_action.php';
+		include'actions/homepage_action.php';
 	}
 ?>

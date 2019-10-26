@@ -2,17 +2,18 @@ body {
   position: relative;
   min-height: 100%;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  background: rgb(22,41,52);
+  background: linear-gradient(0deg, rgba(22,41,52,1) 0%, rgba(71,160,167,1) 52%, rgba(42,206,219,1) 100%); 
 }
 html {
   height: 100%;
   box-sizing: border-box;
 }
 footer {
-  background-color: #bfbfbf;
+  background-color: #8b8b8b;
   padding: 8px;
   text-align: left;
   position: absolute;
-  left: 0;
   bottom: 0;
   width: 100%;
 }
@@ -32,7 +33,7 @@ table, th{
 }
 /*For use with text inside footer*/
 #footer{
-  color: #5e5e5e;
+  color: #d0d0d0;
 }
 .login-container{
     margin-top: 5%;
@@ -52,7 +53,7 @@ table, th{
 }
 .btnSubmit
 {
-    width: 50%;
+    width: 100%;
     border-radius: 1rem;
     padding: 1.5%;
     border: none;
