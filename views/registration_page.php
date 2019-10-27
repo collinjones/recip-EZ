@@ -44,30 +44,29 @@
         </div>
     </nav>
 
-    <!-- Log in UI -->
-    <div class="container filter-container">
-        <div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 login-form-1">
-                    <h3>Create an Account</h3>
-                    <form action=""  method="post">
-                        <div class="form-group">
-                            <input name="username" type="text" class="form-control" placeholder="username" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input name="password_1" type="password" class="form-control" placeholder="password" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input name="password_2" type="password" class="form-control" placeholder="confirm password" value="" />
-                        </div>
-                        <div style="text-align:center" class="form-group">
-                            <input name="send" type="submit" class="btnSubmit" value="Create Account" />
-                        </div>
-                    </form>
-                </div>
+    <!-- Registration UI -->
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form">
+                <h3>Create an Account</h3>
+                <form action=""  method="post">
+                    <div class="form-group">
+                        <input name="username" type="text" class="form-control" placeholder="username" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input name="password_1" type="password" class="form-control" placeholder="password" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input name="password_2" type="password" class="form-control" placeholder="confirm password" value="" />
+                    </div>
+                    <div style="text-align:center" class="form-group">
+                        <input name="send" type="submit" class="btnSubmit" value="Create Account" />
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+
     <!-- PHP Error checking for account creation -->
     <?php
         if(isset($_GET['error_emptyUser'])==true){

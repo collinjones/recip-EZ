@@ -20,6 +20,26 @@ footer {
 h2{
   text-align: center;
 }
+/*Individual items of the navbar*/
+.nav-item
+{
+  font-size: 20;
+  padding: 0px 15px;
+}
+
+/*Changes background color of navbar elements*/
+.nav .open > a:hover{
+  background-color:#fff; 
+}
+/*Changes color of navbar text*/
+.navbar .navbar-nav> li > a:hover{
+  background-color:#5c697d;
+}
+/* Font size for Brand Logo */
+.navbar-brand
+{
+  font-size: 20px;
+}
 /*For use with text inside footer*/
 #footer{
   color: #d0d0d0;
@@ -54,7 +74,7 @@ h2{
     color: #fff;
     background-color: #0062cc;
 }
-
+/* FILTER FORM CSS */
 .filter-form h3{
     text-align: center;
     color: #333;
