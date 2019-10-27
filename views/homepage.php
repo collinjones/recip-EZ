@@ -65,40 +65,70 @@
 				<!-- MEATS SELECTIONS -->
 				<div style="padding: 20px" class="form-row">
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='1' type="checkbox">Steak
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="1" type="checkbox" class="custom-control-input" id="steak">
+						    <label class="custom-control-label" for="steak">Steak</label>
+						</div>
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='2' type="checkbox">Chicken
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="2" type="checkbox" class="custom-control-input" id="chicken">
+						    <label class="custom-control-label" for="chicken">Chicken</label>
+						</div>
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='3' type="checkbox">Salmon
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="3" type="checkbox" class="custom-control-input" id="salmon">
+						    <label class="custom-control-label" for="salmon">Salmon</label>
+						</div>
 					</div>		
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='4' type="checkbox">Pork
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="4" type="checkbox" class="custom-control-input" id="pork">
+						    <label class="custom-control-label" for="pork">Pork</label>
+						</div>
 					</div>
 				</div>
 				<!-- VEGETABLES SELECTIONS -->
 				<div style="padding: 20px" class="form-row">
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='5' type="checkbox">Green Beans
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="5" type="checkbox" class="custom-control-input" id="green_beans">
+						    <label class="custom-control-label" for="green_beans">Green Beans</label>
+						</div>
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='6' type="checkbox">Brussel Sprouts
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="6" type="checkbox" class="custom-control-input" id="brussel_sprouts">
+						    <label class="custom-control-label" for="brussel_sprouts">Brussel Sprouts</label>
+						</div>
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='7' type="checkbox">Zuccinni
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="7" type="checkbox" class="custom-control-input" id="zuccinni">
+						    <label class="custom-control-label" for="zuccinni">Zuccinni</label>
+						</div>
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='8' type="checkbox">Eggplant
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="8" type="checkbox" class="custom-control-input" id="eggplant">
+						    <label class="custom-control-label" for="eggplant">Eggplant</label>
+						</div>
 					</div>
 				</div>
 				<!-- SPICES SELECTIONS -->
 				<div style="padding: 20px" class="form-row">
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='9' type="checkbox">Salt
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="9" type="checkbox" class="custom-control-input" id="salt">
+						    <label class="custom-control-label" for="salt">Salt</label>
+						</div>
 					</div>
 					<div class="form-column" style="padding: 5px">
-						<input name='check_list[]' value='10' type="checkbox">Pepper
+						<div class="custom-control custom-checkbox">
+						    <input name="check_list[]" value="10" type="checkbox" class="custom-control-input" id="pepper">
+						    <label class="custom-control-label" for="pepper">Pepper</label>
+						</div>
 					</div>
 				</div>
 				<div class="form-row" style="padding: 20px">
@@ -108,20 +138,25 @@
 					  	</button>
 					  	<div style="width:auto"class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					  		<input name='exclusion_list[]' value='1' type="checkbox">
-					  		Steak
-					  		<input name='exclusion_list[]' value='2' type="checkbox">Chicken
-					  		<input name='exclusion_list[]' value='3' type="checkbox">Salmon
+					  			Steak
+					  		<input name='exclusion_list[]' value='2' type="checkbox">
+					  			Chicken
+					  		<input name='exclusion_list[]' value='3' type="checkbox">
+					  			Salmon
 					  		<input name='exclusion_list[]' value='4' type="checkbox">
-					  		Pork
-					  		<input name='exclusion_list[]' value='5' type="checkbox">Green Beans
-					  		<input name='exclusion_list[]' value='6' type="checkbox">Brussel Sprouts
-					  		<input name='exclusion_list[]' value='7' type="checkbox">Zuccinni
+					  			Pork
+					  		<input name='exclusion_list[]' value='5' type="checkbox">
+					  			Green Beans
+					  		<input name='exclusion_list[]' value='6' type="checkbox">
+					  			Brussel Sprouts
+					  		<input name='exclusion_list[]' value='7' type="checkbox">
+					  			Zuccinni
 					  		<input name='exclusion_list[]' value='8' type="checkbox">
-					  		Eggplant
+					  			Eggplant
 					  		<input name='exclusion_list[]' value='9' type="checkbox">
-					  		Salt
+					  			Salt
 					  		<input name='exclusion_list[]' value='10' type="checkbox">
-					  		Pepper
+					  			Pepper
 					  	</div>
 					</div>
 				</div>

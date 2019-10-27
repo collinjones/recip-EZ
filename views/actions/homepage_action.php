@@ -1,6 +1,7 @@
 <?php
 	include'connect_action.php';
 
+	$ingredient_count = 1;
 	$ingredient_array = array();
 	$exclusions_array = array();
 	$ingredient_string = "";
@@ -21,6 +22,15 @@
 			}
 			else{
 				$ingredient_string .= $value . ", ";
+			}
+		}
+	}
+	// if the user selected no items, then all ingredients are added. 
+	else{
+		for($ingredient_count=1; $ingredient_count <= 10; $ingredient_count++){
+			$ingredient_string .= $ingredient_count . ", ";
+			if($ingredient_count == 10){
+				$ingredient_string .= $ingredient_count;
 			}
 		}
 	}
@@ -49,7 +59,6 @@
 					    WHERE R.RecipeID = I.RecipeID AND R.RecipeID NOT IN (SELECT RecipeID FROM Ingredients WHERE IngredientCode in ($exclusion_string)) #Exclusion list
 					    GROUP BY RecipeURL
 					    ORDER BY Likeness desc";
-
 	$result = mysqli_query($conn, $recipe_query) or die(mysqli_error($conn));
 	echo mysqli_num_rows($result);
 

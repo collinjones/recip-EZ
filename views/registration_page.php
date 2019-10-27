@@ -39,8 +39,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ml-auto">
-                <li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log in</a></li>
                 <li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
+                <li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log In</a></li>
             </ul>
         </div>
     </nav>
@@ -49,7 +49,7 @@
     <div class="container">
         <div class="container login-container">
             <div class="row">
-                <div style="background-image: url('../resources/img/gradient.png')" class="col-md-6 login-form-1">
+                <div class="col-md-6 login-form-1">
                     <h3>Create an Account</h3>
                     <form action=""  method="post">
                         <div class="form-group">

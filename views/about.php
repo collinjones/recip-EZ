@@ -61,19 +61,14 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
-				<?php
-					if(isset($_SESSION["loggedin"])){
-						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>';
-					} 
-				?>
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
-
 				<!-- Updates Log In / Log Out link based user logged in status -->
 				<?php 
 					if(isset($_SESSION["loggedin"])){
+						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>';
 						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="actions/logout_action.php" class="nav-link">Log Out</a></li>';
 					}
 					else{
+						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="registration_page.php" class="nav-link">Create Account</a></li>';
 						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log In</a></li>';
 					}
 				?>

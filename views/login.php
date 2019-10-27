@@ -75,7 +75,7 @@
 	<div class="container">
 		<div class="container login-container">
             <div class="row">
-                <div style="background-image: url('../resources/img/gradient.png')" class="col-md-6 login-form-1">
+                <div class="col-md-6 login-form-1">
                     <h3>Login</h3>
                     <form onsubmit="return validateForm()" action="" name="login_form" method="post">
                         <div class="form-group">
