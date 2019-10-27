@@ -10,6 +10,7 @@
     <meta name="description" content="Registration Page for Project">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
@@ -39,7 +40,6 @@
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ml-auto">
                 <li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
-                <li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log In</a></li>
             </ul>
         </div>
     </nav>
@@ -48,43 +48,45 @@
     <div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form">
-                <h3>Create an Account</h3>
+                <br><h3>Create an Account</h3>
                 <form action=""  method="post">
                     <div class="form-group">
-                        <input name="username" type="text" class="form-control" placeholder="username" value="" />
+                        <input name="username" type="text" class="form-control" placeholder="username" />
                     </div>
                     <div class="form-group">
-                        <input name="password_1" type="password" class="form-control" placeholder="password" value="" />
+                        <input name="password_1" type="password" class="form-control" placeholder="password" />
                     </div>
                     <div class="form-group">
-                        <input name="password_2" type="password" class="form-control" placeholder="confirm password" value="" />
+                        <input name="password_2" type="password" class="form-control" placeholder="confirm password" />
+                    </div>
+                    <!-- PHP Error checking for account creation -->
+                    <?php
+                        if(isset($_GET['error_emptyUser'])==true){
+                            echo '<font color="#FF0000"><p> Username is required </p></font color>';
+                        }
+                        if(isset($_GET['error_emptyPass'])==true){
+                            echo '<font color="#FF0000"><p> Password is required </p></font color>';
+                        }
+                        if(isset($_GET['error_missmatch'])==true){
+                            echo '<font color="#FF0000"><p> Passwords do not match </p></font color>';
+                        }
+                        if(isset($_GET['error_exists'])==true){
+                            echo '<font color="#FF0000"><p> Username already exists </p></font color>';
+                        }
+                        if(isset($_GET['error_match'])==true){
+                            echo '<font color="#FF0000"><p> Username and Password cannot match! </p></font color>';
+                        }
+                    ?>
+                    <div style="text-align:center" class="form-group">
+                        <input name="send" type="submit" class="btnSubmit" value="Submit" />
                     </div>
                     <div style="text-align:center" class="form-group">
-                        <input name="send" type="submit" class="btnSubmit" value="Create Account" />
+                        <a href="login.php" class="btn-info">Returning user?</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-    <!-- PHP Error checking for account creation -->
-    <?php
-        if(isset($_GET['error_emptyUser'])==true){
-            echo '<font color="#FF0000"><p> Username is required </p></font color>';
-        }
-        if(isset($_GET['error_emptyPass'])==true){
-            echo '<font color="#FF0000"><p> Password is required </p></font color>';
-        }
-        if(isset($_GET['error_missmatch'])==true){
-            echo '<font color="#FF0000"><p> Passwords do not match </p></font color>';
-        }
-        if(isset($_GET['error_exists'])==true){
-            echo '<font color="#FF0000"><p> Username already exists </p></font color>';
-        }
-        if(isset($_GET['error_match'])==true){
-            echo '<font color="#FF0000"><p> Username and Password cannot match! </p></font color>';
-        }
-    ?>
 
     <!-- FOOTER -->
     <footer id="footer">

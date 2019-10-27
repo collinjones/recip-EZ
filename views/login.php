@@ -12,6 +12,7 @@
 	<meta name="author" content="Collin Jones">
 	<meta name="description" content="Login Page for Project">
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">   
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
@@ -60,7 +61,6 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
-				<li style="list-style-type: none;" class="nav-item"><a align="center" href="registration_page.php" class="nav-link">Create Account</a></li>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
 			</ul>
 		</div>
@@ -70,19 +70,19 @@
 	<div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form">
-                <h3>Login</h3>
+                <br><h3>Login</h3>
                 <form onsubmit="return validateForm()" action="" name="login_form" method="post">
                     <div class="form-group">
-                        <input name="username" type="text" class="form-control" placeholder="username" value="" />
+                        <input name="username" type="text" class="form-control" placeholder="username" />
                     </div>
                     <div class="form-group">
-                        <input name="password" type="password" class="form-control" placeholder="password" value="" />
+                        <input name="password" type="password" class="form-control" placeholder="password"/>
                     </div>
                     <div style="text-align:center" class="form-group">
                         <input name="send" type="submit" class="btnSubmit" value="Login" />
                     </div>
                     <div style="text-align:center" class="form-group">
-                        <a href="registration_page.php" class="btn-info">Create an Account</a>
+                        <a href="registration_page.php" class="btn-info">Need an account?</a>
                     </div>
 					<?php
 						if(isset($_GET['error'])==true){

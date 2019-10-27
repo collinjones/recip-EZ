@@ -60,13 +60,11 @@
 					    GROUP BY RecipeURL
 					    ORDER BY Likeness desc";
 	$result = mysqli_query($conn, $recipe_query) or die(mysqli_error($conn));
-	echo mysqli_num_rows($result);
-
-	// Process all rows
 	if(mysqli_num_rows($result) > 0){
 		while($row = mysqli_fetch_array($result)) {
 			$finalResult = $row['RecipeURL'];
 		    echo $finalResult;
+		    echo "<br>";
 		}
 	}
 ?>

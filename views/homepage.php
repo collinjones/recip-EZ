@@ -1,4 +1,5 @@
 <?php
+	ob_start();
 	include'actions/session_action.php';
 ?>
 
@@ -12,6 +13,7 @@
 	<meta name="author" content="Collin Jones">
 	<meta name="description" content="homepage for recip-ez">
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
@@ -52,18 +54,18 @@
 	<div class="container filter-container">
 		<div class="row">
 			<!-- LEFT COLUMN -->
-			<div class="col-md6 filter-form-box">
+			<div class="col-sm filter-form-box">
 				<form class="filter-form" method="post" action="">
 					<!-- SEARCH -->
 					<h3 class="filter-form">Recipe Search</h3>
-					<div class="form-row" style="padding: 20px">	
+					<div class="form-row" style="padding: 5px">	
 						<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
 					</div>
 					<h2 class='filter-form'>Ingredient Filter</h2>
 					<br>
 					<!-- MEATS SELECTIONS -->
 					<h4>MEATS</h4>
-					<div style="padding: 20px" class="form-row">
+					<div style="padding: 5%" class="form-row">
 						<div class="form-column" style="padding: 5px">
 							<div class="custom-control custom-checkbox">
 							    <input name="check_list[]" value="1" type="checkbox" class="custom-control-input" id="steak">
@@ -91,7 +93,7 @@
 					</div>
 					<!-- VEGETABLES SELECTIONS -->
 					<h4>VEGETABLES</h4>
-					<div style="padding: 20px" class="form-row">
+					<div style="padding: 5%" class="form-row">
 						<div class="form-column" style="padding: 5px">
 							<div class="custom-control custom-checkbox">
 							    <input name="check_list[]" value="5" type="checkbox" class="custom-control-input" id="green_beans">
@@ -119,7 +121,7 @@
 					</div>
 					<!-- SPICES SELECTIONS -->
 					<h4>SPICES</h4>
-					<div style="padding: 20px" class="form-row">
+					<div style="padding: 5%" class="form-row">
 						<div class="form-column" style="padding: 5px">
 							<div class="custom-control custom-checkbox">
 							    <input name="check_list[]" value="9" type="checkbox" class="custom-control-input" id="salt">
@@ -134,12 +136,12 @@
 						</div>
 					</div>
 					<!-- EXLUSIONS -->
-					<div class="form-row">
+					<div style="padding:5%" class="form-row">
 						<div class="dropdown">
 						  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    	Exlusions
 						  	</button>
-						  	<div style="width:auto"class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						  	<div style="padding:5%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						  		<input name='exclusion_list[]' value='1' type="checkbox">
 						  			Steak
 						  		<input name='exclusion_list[]' value='2' type="checkbox">
@@ -170,8 +172,12 @@
 				</form>
 			</div>
 			<!-- RIGHT COLUMN -->
-			<div class="col-sm">
-
+			<div class="col-lg">
+				<?php
+					if(isset($_POST['send'])){
+						include'actions/homepage_action.php';
+					}
+				?>
 			</div>
 		</div>	
 	</div>
@@ -185,9 +191,3 @@
 
 </body>
 </html>
-
-<?php
-	if(isset($_POST['send'])){
-		include'actions/homepage_action.php';
-	}
-?>

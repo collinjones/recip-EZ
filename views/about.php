@@ -11,6 +11,7 @@
 	<meta name="author" content="Collin Jones">
 	<meta name="description" content="about us page for recip-ez">
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
