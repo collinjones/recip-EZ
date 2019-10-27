@@ -66,7 +66,7 @@
 		</div>
 	</nav>
 
-   <!-- Log in UI -->
+    <!-- Log in UI -->
 	<div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form">
@@ -80,6 +80,9 @@
                     </div>
                     <div style="text-align:center" class="form-group">
                         <input name="send" type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                    <div style="text-align:center" class="form-group">
+                        <a href="registration_page.php" class="btn-info">Create an Account</a>
                     </div>
 					<?php
 						if(isset($_GET['error'])==true){

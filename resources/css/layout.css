@@ -20,7 +20,8 @@ footer {
 h2{
   text-align: center;
 }
-/*Individual items of the navbar*/
+
+/* NAVBAR CSS */
 .nav-item
 {
   font-size: 20;
@@ -44,9 +45,10 @@ h2{
 #footer{
   color: #d0d0d0;
 }
+
 .login-container{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 /*box around login form*/
 .login-form{
@@ -65,14 +67,21 @@ h2{
 }
 .btnSubmit
 {
-    width: 50%;
+    width: 100%;
     border-radius: 1rem;
     padding: 1.5%;
     border: none;
-    cursor: pointer;
-    font-weight: 600;
     color: #fff;
-    background-color: #0062cc;
+    background-color: #f086e2;
+}
+.btn-info{
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    padding: 1.5%;
+    background-color: #f086e2;
+    text-decoration: none !important;
 }
 /* FILTER FORM CSS */
 .filter-form h3{
