@@ -6,6 +6,7 @@
 <html lang="en-US">
 
 <head>
+	<title> Log In </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Collin Jones">
@@ -15,7 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 
-	<title> Log In </title>
 	<script>
 		// Error checking popup script
 		function validateForm() {
@@ -35,11 +35,6 @@
 			}
 		}
 	</script>
-	<style>
-	table, th{
-		border-collapse:collapse;
-	}
-	</style>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
 <body background="../resources/img/gradient2.img">
@@ -72,30 +67,28 @@
 	</nav>
 
    <!-- Log in UI -->
-	<div class="container">
-		<div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 login-form-1">
-                    <h3>Login</h3>
-                    <form onsubmit="return validateForm()" action="" name="login_form" method="post">
-                        <div class="form-group">
-                            <input name="username" type="text" class="form-control" placeholder="username" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input name="password" type="password" class="form-control" placeholder="password" value="" />
-                        </div>
-                        <div style="text-align:center" class="form-group">
-                            <input name="send" type="submit" class="btnSubmit" value="Login" />
-                        </div>
-						<?php
-							if(isset($_GET['error'])==true){
-							  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
-							} 
-						?>
-                    </form>
-                </div>
+	<div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Login</h3>
+                <form onsubmit="return validateForm()" action="" name="login_form" method="post">
+                    <div class="form-group">
+                        <input name="username" type="text" class="form-control" placeholder="username" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input name="password" type="password" class="form-control" placeholder="password" value="" />
+                    </div>
+                    <div style="text-align:center" class="form-group">
+                        <input name="send" type="submit" class="btnSubmit" value="Login" />
+                    </div>
+					<?php
+						if(isset($_GET['error'])==true){
+						  echo '<font color="#FF0000"><p> Username / Password do not match </p></font color>';
+						} 
+					?>
+                </form>
             </div>
-		</div>
+        </div>
 	</div>
 
 

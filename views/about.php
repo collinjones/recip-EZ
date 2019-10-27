@@ -5,35 +5,16 @@
 <html lang="en-US">
 
 <head>
+	<title> About us </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Collin Jones">
-	<meta name="description" content="Login Page for Project">
+	<meta name="description" content="about us page for recip-ez">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 
-	<title> Log In </title>
-	<script>
-		// Error checking popup script
-		function validateForm() {
-			var formUsr = document.forms["login_form"]["username"].value;
-			var formPwd = document.forms["login_form"]["password"].value;
-			if (formUsr == "" && formPwd == "") {
-				alert("Please enter a username and password");
-				return false;
-			}
-			else if (formUsr == ""){
-				alert("Please enter a username");
-				return false;
-			}
-			else if (formPwd == ""){
-				alert("Please enter a password");
-				return false;
-			}
-		}
-	</script>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
 <body>
@@ -45,7 +26,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<a href="homepage.php" class="navbar-brand">Recip-Ez</a>
-
+		
 		<!-- Sets the logged status text color -->
 		<?php 
 			if(isset($_SESSION["loggedin"])){
@@ -55,7 +36,6 @@
 				echo '<span style="color:red"> Logged Out </span>';
 			}
 		?>
-
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
 			<span class="navbar-toggler-icon"></span>
 		</button>

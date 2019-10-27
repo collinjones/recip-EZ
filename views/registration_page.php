@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Sign Up</title>
     <meta charset="utf-8">
     <meta name="author" content="Collin Jones">
     <meta name="description" content="Registration Page for Project">
@@ -12,8 +13,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
-
-    <title>Sign Up</title>
 
 </head>
 <!-------- CONTENT STARTS HERE --------------->
@@ -46,7 +45,7 @@
     </nav>
 
     <!-- Log in UI -->
-    <div class="container">
+    <div class="container filter-container">
         <div class="container login-container">
             <div class="row">
                 <div class="col-md-6 login-form-1">

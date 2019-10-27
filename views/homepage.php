@@ -6,24 +6,16 @@
 <html lang="en-US">
 
 <head>
+	<title> Homepage </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Collin Jones">
-	<meta name="description" content="Login Page for Project">
+	<meta name="description" content="homepage for recip-ez">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 
-	<title> Homepage </title>
-	<style>
-		table, th{
-			border-collapse:collapse;
-		}
-		.form-row {
-			max-width: 500px;
-		}
-	</style>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
 <body>
@@ -34,6 +26,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<a href="homepage.php" class="navbar-brand">Recip-Ez</a>
+
+		<!-- Sets the logged status text color -->
 		<?php 
 			if(isset($_SESSION["loggedin"])){
 				echo '<span style="color:green"> Logged In </span>';
@@ -57,115 +51,128 @@
 	<!-- MIDDLE CONTENT -->
 	<div class="container">
 		<div class="row">
-			<form method="post" action="">
-				<!-- SEARCH -->
-				<div class="form-row" style="padding: 20px">	
-					<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
-				</div>
-				<!-- MEATS SELECTIONS -->
-				<div style="padding: 20px" class="form-row">
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="1" type="checkbox" class="custom-control-input" id="steak">
-						    <label class="custom-control-label" for="steak">Steak</label>
+			<!-- LEFT COLUMN -->
+			<div class="col-sm filter-form-box">
+				<form class="filter-form" method="post" action="">
+					<!-- SEARCH -->
+					<br>
+					<h3 class="filter-form">Recipe Search</h3>
+					<div class="form-row" style="padding: 20px">	
+						<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
+					</div>
+					<h2 class='filter-form'>Ingredient Filter</h2>
+					<br>
+					<!-- MEATS SELECTIONS -->
+					<h4>MEAT SELECTION</h4>
+					<div style="padding: 20px" class="form-row">
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="1" type="checkbox" class="custom-control-input" id="steak">
+							    <label class="custom-control-label" for="steak">Steak</label>
+							</div>
+						</div>
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="2" type="checkbox" class="custom-control-input" id="chicken">
+							    <label class="custom-control-label" for="chicken">Chicken</label>
+							</div>
+						</div>
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="3" type="checkbox" class="custom-control-input" id="salmon">
+							    <label class="custom-control-label" for="salmon">Salmon</label>
+							</div>
+						</div>		
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="4" type="checkbox" class="custom-control-input" id="pork">
+							    <label class="custom-control-label" for="pork">Pork</label>
+							</div>
 						</div>
 					</div>
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="2" type="checkbox" class="custom-control-input" id="chicken">
-						    <label class="custom-control-label" for="chicken">Chicken</label>
+					<!-- VEGETABLES SELECTIONS -->
+					<h4>VEGETABLE SELECTION</h4>
+					<div style="padding: 20px" class="form-row">
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="5" type="checkbox" class="custom-control-input" id="green_beans">
+							    <label class="custom-control-label" for="green_beans">Green Beans</label>
+							</div>
+						</div>
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="6" type="checkbox" class="custom-control-input" id="brussel_sprouts">
+							    <label class="custom-control-label" for="brussel_sprouts">Brussel Sprouts</label>
+							</div>
+						</div>
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="7" type="checkbox" class="custom-control-input" id="zuccinni">
+							    <label class="custom-control-label" for="zuccinni">Zuccinni</label>
+							</div>
+						</div>
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="8" type="checkbox" class="custom-control-input" id="eggplant">
+							    <label class="custom-control-label" for="eggplant">Eggplant</label>
+							</div>
 						</div>
 					</div>
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="3" type="checkbox" class="custom-control-input" id="salmon">
-						    <label class="custom-control-label" for="salmon">Salmon</label>
+					<!-- SPICES SELECTIONS -->
+					<h4>SPICES SELECTION</h4>
+					<div style="padding: 20px" class="form-row">
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="9" type="checkbox" class="custom-control-input" id="salt">
+							    <label class="custom-control-label" for="salt">Salt</label>
+							</div>
 						</div>
-					</div>		
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="4" type="checkbox" class="custom-control-input" id="pork">
-						    <label class="custom-control-label" for="pork">Pork</label>
-						</div>
-					</div>
-				</div>
-				<!-- VEGETABLES SELECTIONS -->
-				<div style="padding: 20px" class="form-row">
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="5" type="checkbox" class="custom-control-input" id="green_beans">
-						    <label class="custom-control-label" for="green_beans">Green Beans</label>
+						<div class="form-column" style="padding: 5px">
+							<div class="custom-control custom-checkbox">
+							    <input name="check_list[]" value="10" type="checkbox" class="custom-control-input" id="pepper">
+							    <label class="custom-control-label" for="pepper">Pepper</label>
+							</div>
 						</div>
 					</div>
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="6" type="checkbox" class="custom-control-input" id="brussel_sprouts">
-						    <label class="custom-control-label" for="brussel_sprouts">Brussel Sprouts</label>
+					<div class="form-row" style="padding: 20px">
+						<div class="dropdown">
+						  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    	Exlusions
+						  	</button>
+						  	<div style="width:auto"class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						  		<input name='exclusion_list[]' value='1' type="checkbox">
+						  			Steak
+						  		<input name='exclusion_list[]' value='2' type="checkbox">
+						  			Chicken
+						  		<input name='exclusion_list[]' value='3' type="checkbox">
+						  			Salmon
+						  		<input name='exclusion_list[]' value='4' type="checkbox">
+						  			Pork
+						  		<input name='exclusion_list[]' value='5' type="checkbox">
+						  			Green Beans
+						  		<input name='exclusion_list[]' value='6' type="checkbox">
+						  			Brussel Sprouts
+						  		<input name='exclusion_list[]' value='7' type="checkbox">
+						  			Zuccinni
+						  		<input name='exclusion_list[]' value='8' type="checkbox">
+						  			Eggplant
+						  		<input name='exclusion_list[]' value='9' type="checkbox">
+						  			Salt
+						  		<input name='exclusion_list[]' value='10' type="checkbox">
+						  			Pepper
+						  	</div>
 						</div>
 					</div>
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="7" type="checkbox" class="custom-control-input" id="zuccinni">
-						    <label class="custom-control-label" for="zuccinni">Zuccinni</label>
+					<div class="form-row">
+						<div class="col text-center">
+							<button name="send" type="submit" class="btn btn-primary center-block">Submit</button>
 						</div>
 					</div>
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="8" type="checkbox" class="custom-control-input" id="eggplant">
-						    <label class="custom-control-label" for="eggplant">Eggplant</label>
-						</div>
-					</div>
-				</div>
-				<!-- SPICES SELECTIONS -->
-				<div style="padding: 20px" class="form-row">
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="9" type="checkbox" class="custom-control-input" id="salt">
-						    <label class="custom-control-label" for="salt">Salt</label>
-						</div>
-					</div>
-					<div class="form-column" style="padding: 5px">
-						<div class="custom-control custom-checkbox">
-						    <input name="check_list[]" value="10" type="checkbox" class="custom-control-input" id="pepper">
-						    <label class="custom-control-label" for="pepper">Pepper</label>
-						</div>
-					</div>
-				</div>
-				<div class="form-row" style="padding: 20px">
-					<div class="dropdown">
-					  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    	Exlusions
-					  	</button>
-					  	<div style="width:auto"class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					  		<input name='exclusion_list[]' value='1' type="checkbox">
-					  			Steak
-					  		<input name='exclusion_list[]' value='2' type="checkbox">
-					  			Chicken
-					  		<input name='exclusion_list[]' value='3' type="checkbox">
-					  			Salmon
-					  		<input name='exclusion_list[]' value='4' type="checkbox">
-					  			Pork
-					  		<input name='exclusion_list[]' value='5' type="checkbox">
-					  			Green Beans
-					  		<input name='exclusion_list[]' value='6' type="checkbox">
-					  			Brussel Sprouts
-					  		<input name='exclusion_list[]' value='7' type="checkbox">
-					  			Zuccinni
-					  		<input name='exclusion_list[]' value='8' type="checkbox">
-					  			Eggplant
-					  		<input name='exclusion_list[]' value='9' type="checkbox">
-					  			Salt
-					  		<input name='exclusion_list[]' value='10' type="checkbox">
-					  			Pepper
-					  	</div>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="col text-center">
-						<button name="send" type="submit" class="btn btn-primary center-block">Submit</button>
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
+			<!-- RIGHT COLUMN -->
+			<div class="col-sm">
+			</div>
 		</div>	
 	</div>
 
