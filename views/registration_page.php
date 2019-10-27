@@ -2,13 +2,13 @@
     session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
     <meta name="author" content="Collin Jones">
     <meta name="description" content="Registration Page for Project">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,7 +18,6 @@
 </head>
 <!-------- CONTENT STARTS HERE --------------->
 <body>
-  
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -45,7 +44,7 @@
     </nav>
 
     <!-- Registration UI -->
-    <div class="container login-container">
+    <div class="login-container">
         <div class="row">
             <div class="col-md-6 login-form">
                 <br><h3>Create an Account</h3>

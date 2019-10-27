@@ -1,36 +1,40 @@
 /*recip-EZ stylesheet*/
-body {
-  position: relative;
-  min-height: 100%;
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: table;
   font-family: 'Roboto Condensed', sans-serif;
-  /* gradient background */
   background: rgb(147,95,182);
   background: linear-gradient(90deg, rgba(147,95,182,1) 0%, rgba(255,144,144,1) 58%, rgba(255,188,93,1) 100%); 
-  /* gradient background */
 }
 /* footer settings */
 footer {
-  background-color: #8b8b8b;
-  padding: 8px;
-  text-align: left;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    padding: 5%;
+    background-color: grey;
+    color: white;
+    display: table-row;
+    text-align: center;
 }
 h2{
   text-align: center;
 }
-
+.container {
+    float: left;
+}
 /* NAVBAR CSS */
 .nav-item
 {
   font-size: 20;
   padding: 0px 15px;
 }
-
 /*Changes background color of navbar elements*/
 .nav .open > a:hover{
-  background-color:#fff; 
+  background-color:#fff;
+}
+.navbar .navbar-nav> li > a{
+  border-radius: 1rem;
+  transition:0.2s; 
 }
 /*Changes color of navbar text*/
 .navbar .navbar-nav> li > a:hover{
@@ -41,10 +45,6 @@ h2{
 {
   font-size: 20px;
 }
-/*For use with text inside footer*/
-#footer{
-  color: #d0d0d0;
-}
 
 .login-container{
     margin-top: 10%;
@@ -52,6 +52,7 @@ h2{
 }
 /*box around login form*/
 .login-form{
+    border-radius: 5rem;
     margin: 0 auto;
     padding: 0%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
@@ -63,9 +64,8 @@ h2{
     color: #ffffff;
 }
 .login-container form{
-    padding: 10%;
+    padding: 5%;
 }
-
 .btnSubmit
 {
     width: 50%;
@@ -113,6 +113,9 @@ h2{
 }
 /* change values to move the filter box around */
 .filter-container{
+    padding: 9px;
+    min-height: 50%;
+    width: 50%; 
     margin-top: 1%; /* up and down */
     margin-left: 1%; /* left and right */
 }
@@ -120,4 +123,10 @@ h2{
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     background: rgb(158,197,207);
     background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
+}
+.dropdown-menu-center {
+  text-align: center !important;
+}
+.row{
+  width:100%;
 }

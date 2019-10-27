@@ -58,18 +58,13 @@
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
-	<div id="container">
-		<div id="main">
 
-		</div>
-	</div>
-
-	<!-- FOOTER -->
-	<footer id="footer">
-		<div id="container">
-			<span>&copy; 2019 Team One</span>
-		</div>
-	</footer>
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div id="container">
+            <span>&copy; 2019 Team One</span>
+        </div>
+    </footer>
 
 </body>
 </html>
