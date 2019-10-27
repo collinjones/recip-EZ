@@ -2,39 +2,23 @@
 body {
   position: relative;
   min-height: 100%;
-  font-family: "Arial Black", Gadget, sans-serif;
-  background: rgb(158,197,207);
-  background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(185,173,213,1) 26%, rgba(140,194,142,1) 75%, rgba(158,197,207,1) 100%);  
+  font-family: "Arial Black", Gadget, sans-serif;/* default font*/
+  /* gradient background */
+  background: rgb(147,95,182);
+  background: linear-gradient(90deg, rgba(147,95,182,1) 0%, rgba(255,144,144,1) 58%, rgba(255,188,93,1) 100%); 
+  /* gradient background */
 }
-html {
-  height: 100%;
-  box-sizing: border-box;
-}
+/* footer settings */
 footer {
   background-color: #8b8b8b;
   padding: 8px;
   text-align: left;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
-table, th{
-  border-collapse: collapse;
-}
-*{
-  margin: 0px;
-  padding: 0;
-}
 h2{
-  font-family: "Arial Black", Gadget, sans-serif;
   text-align: center;
-}
-#container{
-    min-height: 100%;
-}
-#main{
-  overflow: auto;
-  padding-bottom: 50px;
 }
 /*For use with text inside footer*/
 #footer{
@@ -45,29 +29,27 @@ h2{
     margin-bottom: 5%;
 }
 /*box around login form*/
-.login-form-1{
+.login-form{
     margin: 0 auto;
     padding: 5%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     background: rgb(158,197,207);
     background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
 }
-.login-form-1 h3{
+.login-form h3{
     text-align: center;
-    color: #333;
+    color: #ffffff;
 }
 .login-container form{
     padding: 10%;
 }
 .btnSubmit
 {
-    width: 100%;
+    width: 50%;
     border-radius: 1rem;
     padding: 1.5%;
     border: none;
     cursor: pointer;
-}
-.login-form-1 .btnSubmit{
     font-weight: 600;
     color: #fff;
     background-color: #0062cc;
@@ -76,6 +58,7 @@ h2{
 .filter-form h3{
     text-align: center;
     color: #333;
+    padding: 10px;
 }
 .filter-form h4{
     text-align: center;
@@ -89,4 +72,7 @@ h2{
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     background: rgb(158,197,207);
     background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
+}
+.exclusion-checklist{
+    display:inline-block;
 }

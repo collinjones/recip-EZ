@@ -49,13 +49,12 @@
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
-	<div class="container">
+	<div class="container filter-container">
 		<div class="row">
 			<!-- LEFT COLUMN -->
-			<div class="col-sm filter-form-box">
+			<div class="col-md6 filter-form-box">
 				<form class="filter-form" method="post" action="">
 					<!-- SEARCH -->
-					<br>
 					<h3 class="filter-form">Recipe Search</h3>
 					<div class="form-row" style="padding: 20px">	
 						<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
@@ -63,7 +62,7 @@
 					<h2 class='filter-form'>Ingredient Filter</h2>
 					<br>
 					<!-- MEATS SELECTIONS -->
-					<h4>MEAT SELECTION</h4>
+					<h4>MEATS</h4>
 					<div style="padding: 20px" class="form-row">
 						<div class="form-column" style="padding: 5px">
 							<div class="custom-control custom-checkbox">
@@ -91,7 +90,7 @@
 						</div>
 					</div>
 					<!-- VEGETABLES SELECTIONS -->
-					<h4>VEGETABLE SELECTION</h4>
+					<h4>VEGETABLES</h4>
 					<div style="padding: 20px" class="form-row">
 						<div class="form-column" style="padding: 5px">
 							<div class="custom-control custom-checkbox">
@@ -119,7 +118,7 @@
 						</div>
 					</div>
 					<!-- SPICES SELECTIONS -->
-					<h4>SPICES SELECTION</h4>
+					<h4>SPICES</h4>
 					<div style="padding: 20px" class="form-row">
 						<div class="form-column" style="padding: 5px">
 							<div class="custom-control custom-checkbox">
@@ -134,7 +133,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-row" style="padding: 20px">
+					<!-- EXLUSIONS -->
+					<div class="form-row">
 						<div class="dropdown">
 						  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    	Exlusions
@@ -163,15 +163,15 @@
 						  	</div>
 						</div>
 					</div>
-					<div class="form-row">
-						<div class="col text-center">
-							<button name="send" type="submit" class="btn btn-primary center-block">Submit</button>
-						</div>
+					<!-- SUBMIT BUTTON -->
+					<div style="text-align:center" class="form-group">
+                    	<input name="send" type="submit" class="btnSubmit" value="Submit" />
 					</div>
 				</form>
 			</div>
 			<!-- RIGHT COLUMN -->
 			<div class="col-sm">
+
 			</div>
 		</div>	
 	</div>
