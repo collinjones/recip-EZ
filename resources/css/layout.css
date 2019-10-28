@@ -1,132 +1,137 @@
 /*recip-EZ stylesheet*/
 html,body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  display: table;
-  font-family: 'Roboto Condensed', sans-serif;
-  background: rgb(147,95,182);
-  background: linear-gradient(90deg, rgba(147,95,182,1) 0%, rgba(255,144,144,1) 58%, rgba(255,188,93,1) 100%); 
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: table;
+	font-family: 'Roboto Condensed', sans-serif;
+	background: rgb(147,95,182);
+	background: linear-gradient(90deg, rgba(147,95,182,1) 0%, rgba(255,144,144,1) 58%, rgba(255,188,93,1) 100%); 
 }
 /* footer settings */
 footer {
-    padding: 5%;
-    background-color: grey;
-    color: white;
-    display: table-row;
-    text-align: center;
+	background-color: grey;
+	color: white;
+	display: table-row;
+	text-align: center;
 }
 h2{
-  text-align: center;
+	text-align: center;
 }
-.container {
-    float: left;
+.filter-container {
+	display: flex;
+	flex-wrap: wrap;
 }
 /* NAVBAR CSS */
 .nav-item
 {
-  font-size: 20;
-  padding: 0px 15px;
+	font-size: 20;
+	padding: 0px 15px;
 }
 /*Changes background color of navbar elements*/
 .nav .open > a:hover{
-  background-color:#fff;
+	background-color:#fff;
 }
 .navbar .navbar-nav> li > a{
-  border-radius: 1rem;
-  transition:0.2s; 
+	border-radius: 1rem;
+	transition:0.2s; 
 }
 /*Changes color of navbar text*/
 .navbar .navbar-nav> li > a:hover{
-  background-color:#5c697d;
+	background-color:#5c697d;
 }
 /* Font size for Brand Logo */
 .navbar-brand
 {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .login-container{
-    margin-top: 10%;
-    margin-bottom: 10%;
+	margin-top: 10%;
+	margin-bottom: 10%;
 }
 /*box around login form*/
 .login-form{
-    border-radius: 5rem;
-    margin: 0 auto;
-    padding: 0%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-    background: rgb(158,197,207);
-    background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
+	max-width: 250px;
+	border-radius: 2rem;
+	margin: 0 auto;
+	padding: 0%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+	background: rgb(158,197,207);
+	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
 }
 .login-form h3{
-    text-align: center;
-    color: #ffffff;
+	text-align: center;
+	color: #ffffff;
 }
 .login-container form{
-    padding: 5%;
+	padding: 5%;
 }
 .btnSubmit
 {
-    width: 50%;
-    border-radius: 1rem;
-    padding: 1.5%;
-    border: none;
-    color: #fff;
-    background-color: #f086e2;
-    text-align:center;
-    /* hover transition time */
-    transition: 0.2s;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+	width: 50%;
+	border-radius: 1rem;
+	padding: 1.5%;
+	border: none;
+	color: #fff;
+	background-color: #f086e2;
+	text-align:center;
+	/* hover transition time */
+	transition: 0.2s;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 }
 .btnSubmit:hover
 {
-    width: 100%;
-    background-color: #a043bf;
+	width: 100%;
+	background-color: #a043bf;
 }
 .btn-info{
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-    width: 50%;
-    border-radius: 1rem;
-    border: none;
-    padding: 1.5%;
-    background-color: #f086e2;
-    transition: 0.2s;
-    text-decoration: none !important;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	width: 70%;
+	border-radius: 1rem;
+	border: none;
+	padding: 1.5%;
+	background-color: #f086e2;
+	transition: 0.2s;
+	text-decoration: none !important;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 }
 .btn-info:hover{
-    width: 100%;
-    background-color: #a043bf;
+	width: 100%;
+	background-color: #a043bf;
 }
 /* FILTER FORM CSS */
 .filter-form h3{
-    text-align: center;
-    color: #333;
-    padding: 5px;
+	text-align: center;
+	color: #333;
+	padding: 5px;
+}
+.filter-form{
+	padding: 5%;
 }
 .filter-form h4{
-    text-align: center;
-    color: #333;
+	text-align: center;
+	color: #333;
 }
 /* change values to move the filter box around */
-.filter-container{
-    padding: 9px;
-    min-height: 50%;
-    width: 50%; 
-    margin-top: 1%; /* up and down */
-    margin-left: 1%; /* left and right */
-}
 .filter-form-box {
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-    background: rgb(158,197,207);
-    background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
+	border-radius: 1rem;
+	position:sticky;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	width: 250px;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+	background: rgb(158,197,207);
+	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
 }
 .dropdown-menu-center {
-  text-align: center !important;
+	text-align: center !important;
 }
-.row{
-  width:100%;
+.row {
+	width: 100%;
+	margin: auto;
 }
