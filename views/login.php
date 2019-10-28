@@ -69,7 +69,7 @@
     <!-- Log in UI -->
 	<div class="login-container">
         <div class="row">
-            <div class="col-md-6 login-form">
+            <div class="login-form">
                 <br><h3>Login</h3>
                 <form onsubmit="return validateForm()" action="" name="login_form" method="post">
                     <div class="form-group">

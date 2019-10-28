@@ -52,7 +52,7 @@
 
 	<!-- MIDDLE CONTENT -->
 	<div class="container">
-		<div class="container filter-container">
+		<div class="filter-container">
 			<div class="row">
 				<!-- LEFT COLUMN -->
 				<div class="col-sm filter-form-box">
