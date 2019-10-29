@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 	<script>
 		function placeSettings(){
-			var username = '<?php echo $username; ?>';
+			var username = '<?php echo $phpUsername; ?>';
 			document.getElementById('username').placeholder = username;
 		}
 	</script>
@@ -64,7 +64,7 @@
 			<div class="settings-box">
 				<form method="post" name="settings_form">
 					<div class="form-group">
-						<h2>Username</h2>
+						<h2>Change Username</h2>
 						<input id="username" name="newUsername" type="text" class="form-control" placeholder=''/>
 					</div>
 					<div style="text-align:center" class="form-group">
