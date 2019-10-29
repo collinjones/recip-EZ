@@ -183,9 +183,7 @@
 	</div>
 	<!-- FOOTER -->
 	<footer>
-		<div>
-			<span> &copy; 2019 Team One</span>
-		</div>
+		<span class="footer-span"> &copy; 2019 Team One</span>
 	</footer>
 
 </body>

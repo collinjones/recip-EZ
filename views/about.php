@@ -60,10 +60,8 @@
 	<!-- MIDDLE CONTENT -->
 
     <!-- FOOTER -->
-    <footer id="footer">
-        <div id="container">
-            <span>&copy; 2019 Team One</span>
-        </div>
+    <footer>
+        <span class="footer-span">&copy; 2019 Team One</span>
     </footer>
 
 </body>
