@@ -130,8 +130,6 @@ h2{
 	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
 }
 .filter-container {
-	display: flex;
-	flex-wrap: wrap;
 	margin: 5px;
 }
 .dropdown-menu-center {
@@ -140,4 +138,14 @@ h2{
 .row {
 	width: 100%;
 	margin: auto;
+}
+.settings-box{
+	height: 100%;
+	margin: 0 auto;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+	background: rgb(158,197,207);
+	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%); 
+}
+.form-group{
+	margin: 5px;
 }
