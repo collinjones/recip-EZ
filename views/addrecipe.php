@@ -1,5 +1,6 @@
-<?php 
-	session_start();
+<?php
+	ob_start();
+	include'actions/session_action.php';
 ?>
 
 <!DOCTYPE html>
@@ -86,4 +87,16 @@
             </div>
         </div>
     </div>
+    <!-- SUBMIT BUTTON -->
+    <div style="text-align:center" class="form-group">
+	    <input name="send" type="submit" class="btnSubmit" value="Submit Recipe" />
+	</div>
+    <div class="col-lg">
+		<?php
+            if(isset($_POST['send']))
+            {
+			    include'actions/addrecipe_action.php';
+			}
+		?>
+	</div>
 </body>
