@@ -1,5 +1,5 @@
 <?php
-	ob_start();
+	ob_start(); /* i think this is unused for now */
 	include'actions/session_action.php';
 ?>
 
@@ -45,17 +45,18 @@
 			<ul class="navbar-nav ml-auto">
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="user_settings.php" class="nav-link">Account Settings</a></li>
 				<li style="list-style-type: none;" class="nav-item"><a align="center" href="actions/logout_action.php" class="nav-link">Log Out</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
-	<div class="container">
-		<div class="filter-container">
-			<div class="row">
-				<!-- LEFT COLUMN -->
-				<div class="col-sm filter-form-box">
+	<div class="filter-container">
+		<div class="row">
+			<!-- LEFT COLUMN -->
+			<div class="flex-column">
+				<div class="filter-form-box">
 					<form class="filter-form" method="post" action="">
 						<!-- SEARCH -->
 						<h2 class="filter-form">Recipe Search</h2>
@@ -170,22 +171,20 @@
 						</div>
 					</form>
 				</div>
-				<!-- RIGHT COLUMN -->
-				<div class="col-lg">
-					<?php
-						if(isset($_POST['send'])){
-							include'actions/homepage_action.php';
-						}
-					?>
-				</div>
-			</div>	
-		</div>
+			</div>
+			<!-- RIGHT COLUMN -->
+			<div class="flex-column">
+				<?php
+					if(isset($_POST['send'])){
+						include'actions/homepage_action.php';
+					}
+				?>
+			</div>
+		</div>	
 	</div>
 	<!-- FOOTER -->
 	<footer>
-		<div id="container">
-			<span> &copy; 2019 Team One</span>
-		</div>
+		<span class="footer-span"> &copy; 2019 Team One</span>
 	</footer>
 
 </body>

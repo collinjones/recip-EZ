@@ -5,11 +5,11 @@
 <html lang="en-US">
 
 <head>
-	<title> About us </title>
+	<title> *REPLACE* </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Collin Jones">
-	<meta name="description" content="about us page for recip-ez">
+	<meta name="description" content="*REPLACE*">
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -42,17 +42,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
-				<!-- Updates Log In / Log Out link based user logged in status -->
-				<?php 
-					if(isset($_SESSION["loggedin"])){
-						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>';
-						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="actions/logout_action.php" class="nav-link">Log Out</a></li>';
-					}
-					else{
-						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="registration_page.php" class="nav-link">Create Account</a></li>';
-						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="login.php" class="nav-link">Log In</a></li>';
-					}
-				?>
+				<!-- *NAVBAR LINKS GO HERE* -->
 			</ul>
 		</div>
 	</nav>
