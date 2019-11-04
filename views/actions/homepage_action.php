@@ -6,14 +6,16 @@
 	$exclusions_array = array();
 	$ingredient_string = "";
 	$exclusion_string= "";
+	$query = false;
 
 
 	// inclusions
 	if(isset($_POST['check_list'])){
-		// add each value from HTML check_list array to PHP ingredien_array. 
+		// add each value from HTML check_list array to PHP ingredien_array.
 		foreach($_POST['check_list'] as $value){
 			array_push($ingredient_array, $value);
 		}
+		$query = true;
 		// need last element in array to format the last comma correctly
 		$lastIngredient = end($ingredient_array);
 		foreach($ingredient_array as $value){
@@ -25,16 +27,18 @@
 			}
 		}
 	}
-	// if the user selected no items, then all ingredients are added. 
+	// if the user selected no items, then all ingredients are added.
 	else{
+		$query = false;
+		$ingredient_string .= -1;
 		for($ingredient_count=1; $ingredient_count <= 10; $ingredient_count++){
 			$ingredient_string .= $ingredient_count . ", ";
 			if($ingredient_count == 10){
-				$ingredient_string .= $ingredient_count;
+				#$ingredient_string .= $ingredient_count;
 			}
 		}
 	}
-	// exclusions 
+	// exclusions
 	if(isset($_POST['exclusion_list'])){
 		foreach($_POST['exclusion_list'] as $value){
 			array_push($exclusions_array, $value);
@@ -53,8 +57,9 @@
 		$exclusion_string .= '-1';
 	}
 
+	if($query) {
 	// query for SQL database
-	$recipe_query = "SELECT RecipeURL, Count(1) as 'Likeness'
+	$recipe_query = "SELECT *, Count(*) as 'Likeness'
 					    FROM Recipes R, (SELECT * FROM Ingredients WHERE IngredientCode in ($ingredient_string)) I #List of selected Ingredients
 					    WHERE R.RecipeID = I.RecipeID AND R.RecipeID NOT IN (SELECT RecipeID FROM Ingredients WHERE IngredientCode in ($exclusion_string)) #Exclusion list
 					    GROUP BY RecipeURL
@@ -62,9 +67,21 @@
 	$result = mysqli_query($conn, $recipe_query) or die(mysqli_error($conn));
 	if(mysqli_num_rows($result) > 0){
 		while($row = mysqli_fetch_array($result)) {
-			$finalResult = $row['RecipeURL'];
-		    echo $finalResult;
-		    echo "<br>";
+			$recipeName = $row['RecipeName'];
+			$recipeURL = $row['RecipeURL'];
+			$recipeDescription = $row['RecipeDescription'];
+			$recipePictureURL = $row['RecipePictureURL'];
+
+			echo "<div class='container'>";
+				echo "<div class='card bg-light'>";
+					echo "<div class='card-header'>" . $recipeName;
+						echo "<div class='card-body'>";
+							echo "<img src='" . $recipePictureURL ."' alt='not found' style='max-width:250px;width:100%'> </img>";
+							echo "<br>";
+							echo "<p>" . $recipeDescription . "</p>";
+							echo "<a href='" . $recipeURL ."'> Go here </a>";
+			echo "</div></div></div></div>";
 		}
 	}
+}
 ?>
