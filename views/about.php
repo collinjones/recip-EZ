@@ -58,6 +58,9 @@
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
+	<div class="container">
+		
+	</div>
 
     <!-- FOOTER -->
     <footer>
