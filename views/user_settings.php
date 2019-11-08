@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 	<script>
 		function placeSettings(){
+			
 			var username = '<?php echo $phpUsername; ?>';
 			document.getElementById('username').placeholder = username;
 		}
@@ -70,6 +71,9 @@
 					<div style="text-align:center" class="form-group">
                     	<input name="send" type="submit" class="btnSubmit" value="Submit" />
 					</div>
+					<!-- ADD DELETE ACCOUNT HERE -->
+					
+
 				</form>
 			</div>
 		</div>

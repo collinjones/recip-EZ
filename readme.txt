@@ -1,1 +1,1 @@
-https://recip-ez.herokuapp.com/login.php
+https://recip-ez.herokuapp.com/index.php
