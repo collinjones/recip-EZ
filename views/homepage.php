@@ -15,7 +15,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">	
+	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 
 </head>
@@ -30,7 +30,7 @@
 		<a href="homepage.php" class="navbar-brand">Recip-Ez</a>
 
 		<!-- Sets the logged status text color -->
-		<?php 
+		<?php
 			if(isset($_SESSION["loggedin"])){
 				echo '<span style="color:green"> Logged In </span>';
 			}
@@ -60,7 +60,7 @@
 					<form class="filter-form" method="post" action="">
 						<!-- SEARCH -->
 						<h2 class="filter-form">Recipe Search</h2>
-						<div class="form-row" style="padding: 5px">	
+						<div class="form-row" style="padding: 5px">
 							<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
 						</div>
 						<h2 class='filter-form'>Ingredient Filter</h2>
@@ -85,7 +85,7 @@
 								    <input name="check_list[]" value="3" type="checkbox" class="custom-control-input" id="salmon">
 								    <label class="custom-control-label" for="salmon">Salmon</label>
 								</div>
-							</div>		
+							</div>
 							<div class="form-column" style="padding: 5px">
 								<div class="custom-control custom-checkbox">
 								    <input name="check_list[]" value="4" type="checkbox" class="custom-control-input" id="pork">
@@ -179,12 +179,13 @@
 						include'actions/homepage_action.php';
 					}
 				?>
+		</div>
 			</div>
-		</div>	
+
 	</div>
 	<!-- FOOTER -->
 	<footer>
-		<span class="footer-span"> &copy; 2019 Team One</span>
+		<span class="flex-container"> &copy; 2019 Team One</span>
 	</footer>
 
 </body>
