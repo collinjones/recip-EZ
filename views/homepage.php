@@ -1,6 +1,21 @@
 <?php
-	ob_start(); /* i think this is unused for now */
 	include'actions/session_action.php';
+	include'actions/connect_action.php';
+	$usr = $_SESSION['user'];
+	//check if user logging in is currently set as vegetarian (for purpose of updating homepage of current settings)
+	$veg_check_query = "SELECT vegetarian 
+						FROM users 
+						WHERE usernames = '$usr'";
+	foreach($conn->query($veg_check_query) as $row){
+		$result = $row['vegetarian'];
+	}
+	if($result == 1){
+		$_SESSION['vegetarian'] = true;
+	}
+	else{
+		$_SESSION['vegetarian'] = false;
+	}
+	$vegetarian = $_SESSION['vegetarian'];
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +32,26 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
+	<script>
+		function placeHomepageSettings(){
+			var vegetarian = '<?php echo $vegetarian; ?>';
+			console.log(vegetarian)
+			if(vegetarian == 1){
+				document.getElementById('steak').disabled = true;
+				document.getElementById('chicken').disabled = true;
+				document.getElementById('salmon').disabled = true;
+				document.getElementById('pork').disabled = true;				
+				document.getElementById('EX_steak').checked = true;
+				document.getElementById('EX_chicken').checked = true;
+				document.getElementById('EX_salmon').checked = true;
+				document.getElementById('EX_pork').checked = true;
 
+			}
+		}
+	</script>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
-<body>
+<body onload="placeHomepageSettings()">
 
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -143,25 +174,25 @@
 						    	Exlusions
 						  	</button>
 						  	<div style="padding:5%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						  		<input name='exclusion_list[]' value='1' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_steak' value='1' type="checkbox">
 						  			Steak
-						  		<input name='exclusion_list[]' value='2' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_chicken' value='2' type="checkbox">
 						  			Chicken
-						  		<input name='exclusion_list[]' value='3' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_salmon' value='3' type="checkbox">
 						  			Salmon
-						  		<input name='exclusion_list[]' value='4' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_pork' value='4' type="checkbox">
 						  			Pork
-						  		<input name='exclusion_list[]' value='5' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_greenbeans' value='5' type="checkbox">
 						  			Green Beans
-						  		<input name='exclusion_list[]' value='6' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_brusselsprouts' value='6' type="checkbox">
 						  			Brussel Sprouts
-						  		<input name='exclusion_list[]' value='7' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_zuccinni' value='7' type="checkbox">
 						  			Zuccinni
-						  		<input name='exclusion_list[]' value='8' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_eggplant' value='8' type="checkbox">
 						  			Eggplant
-						  		<input name='exclusion_list[]' value='9' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_salt' value='9' type="checkbox">
 						  			Salt
-						  		<input name='exclusion_list[]' value='10' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_pepper' value='10' type="checkbox">
 						  			Pepper
 						  	</div>
 						</div>

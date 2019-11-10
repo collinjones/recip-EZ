@@ -16,8 +16,11 @@ if($count == 1){
 	$hashedPass = $userRow['passwords'];
 	//Password match
 	if(password_verify($pwd, $hashedPass)){
+		//set session variables (super globals) 
 		$_SESSION['loggedin'] = true;
 		$_SESSION['user'] = $usr;
+
+		// redirect to homepage
 		header("Location: homepage.php");
 		exit; 
 	}
@@ -27,6 +30,7 @@ if($count == 1){
 		exit;		
 	}
 }
+//Username not a match
 else{
 	header("Location: login.php?error=1");
 	exit;
