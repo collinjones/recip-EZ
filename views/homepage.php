@@ -185,7 +185,8 @@
 	</div>
 	<!-- FOOTER -->
 	<footer>
-		<span class="flex-container"> &copy; 2019 Team One</span>
+		<!-- please leave class as footer-span -->
+		<span class="footer-span"> &copy; 2019 Team One</span>
 	</footer>
 
 </body>
