@@ -19,8 +19,22 @@
 	<script>
 		function placeSettings(){
 			
+			// grabs variables from settings_action.php
 			var username = '<?php echo $phpUsername; ?>';
+			var veg_check = '<?php echo $result; ?>';
+
+			//sets placeholder of username based on currently logged in user
 			document.getElementById('username').placeholder = username;
+
+			// checks/unchecks vegetarian box 
+			if(veg_check == 1){
+				document.getElementById('veg').checked = true;
+				console.log('checked');
+			}
+			else{
+				document.getElementById('veg').checked = false;
+				console.log('unchecked');
+			}
 		}
 	</script>
 
@@ -68,9 +82,14 @@
 						<h2>Change Username</h2>
 						<input id="username" name="newUsername" type="text" class="form-control" placeholder=''/>
 					</div>
+					<div class="form-group">
+						<h2>Vegetarian?</h2>
+						<input id="veg" name="vegetarian" type="checkbox" class="form-control">
+					</div>
 					<div style="text-align:center" class="form-group">
                     	<input name="send" type="submit" class="btnSubmit" value="Submit" />
 					</div>
+
 					<!-- ADD DELETE ACCOUNT HERE -->
 					
 

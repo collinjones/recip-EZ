@@ -162,25 +162,14 @@ h2{
     align-items: center;
 	display: flex;
 	justify-content: center;
-    width: 250px;
-    max-height: 400px;
+    width: 200px;
+    max-height: 10%;
    	min-width: 250px;
 	min-height: 400px;
-    height: 100%;
     padding: 0px;
     margin: 5px;
 }
 .card-header{
-	max-width: 250px;
-	max-height: 400px;
-	min-width: 250px;
-	min-height: 400px;
 	height: 100%;
-}
-.card-body{
-	max-width: 250px;
-	max-height: 400px;
-	min-width: 250px;
-	min-height: 400px;
-	height: 100%;
+	padding: 0;
 }

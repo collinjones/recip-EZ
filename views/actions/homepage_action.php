@@ -8,7 +8,6 @@
 	$exclusion_string= "";
 	$query = false;
 
-
 	// inclusions
 	if(isset($_POST['check_list'])){
 		// add each value from HTML check_list array to PHP ingredien_array.
@@ -29,12 +28,11 @@
 	}
 	// if the user selected no items, then all ingredients are added.
 	else{
-		$query = false;
 		$ingredient_string .= -1;
 		for($ingredient_count=1; $ingredient_count <= 10; $ingredient_count++){
 			$ingredient_string .= $ingredient_count . ", ";
 			if($ingredient_count == 10){
-				#$ingredient_string .= $ingredient_count;
+				$ingredient_string .= $ingredient_count;
 			}
 		}
 	}
@@ -57,8 +55,6 @@
 		$exclusion_string .= '-1';
 	}
 
-	if($query) {
-	// query for SQL database
 	$recipe_query = "SELECT *, Count(*) as 'Likeness'
 					    FROM Recipes R, (SELECT * FROM Ingredients WHERE IngredientCode in ($ingredient_string)) I #List of selected Ingredients
 					    WHERE R.RecipeID = I.RecipeID AND R.RecipeID NOT IN (SELECT RecipeID FROM Ingredients WHERE IngredientCode in ($exclusion_string)) #Exclusion list
@@ -75,12 +71,11 @@
 				echo "<div class='card flex-item'>";
 					echo "<div class='card-header'>" . $recipeName;
 						echo "<div class='card-body'>";
-							echo "<img src='" . $recipePictureURL ."' alt='not found' style='min-width:167px;max-width:200px;width:100%'> </img>";
+							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:200px;width:200px;width:100%'> </img>";
 							echo "<br>";
 							echo "<p>" . $recipeDescription . "</p>";
 							echo "<a href='" . $recipeURL ."'> Go here </a>";
 				echo "</div></div></div>";
 		}
 	}
-}
 ?>

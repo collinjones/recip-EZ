@@ -46,6 +46,7 @@
 				<?php 
 					if(isset($_SESSION["loggedin"])){
 						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>';
+						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="user_settings.php" class="nav-link">Account Settings</a></li>';
 						echo '<li style="list-style-type: none;" class="nav-item"><a align="center" href="actions/logout_action.php" class="nav-link">Log Out</a></li>';
 					}
 					else{
