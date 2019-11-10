@@ -55,7 +55,7 @@
 	<div class="filter-container">
 		<div class="row">
 			<!-- LEFT COLUMN -->
-			<div class="flex-column">
+			<div class="column">
 				<div class="filter-form-box">
 					<form class="filter-form" method="post" action="">
 						<!-- SEARCH -->
@@ -173,15 +173,14 @@
 				</div>
 			</div>
 			<!-- RIGHT COLUMN -->
-			<div class="flex-column">
+			<div class="flex-parent">
 				<?php
 					if(isset($_POST['send'])){
 						include'actions/homepage_action.php';
 					}
 				?>
-		</div>
 			</div>
-
+		</div>
 	</div>
 	<!-- FOOTER -->
 	<footer>

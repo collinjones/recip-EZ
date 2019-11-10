@@ -114,6 +114,7 @@ h2{
 }
 .filter-form{
 	padding: 5%;
+	height: 100%;
 }
 .filter-form h4{
 	text-align: center;
@@ -148,4 +149,38 @@ h2{
 }
 .form-group{
 	margin: 5px;
+}
+.flex-parent{
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  flex-direction: row;
+	  align-items: flex-start;
+	  width: 50%;
+}
+.card.flex-item{
+    align-items: center;
+	display: flex;
+	justify-content: center;
+    width: 250px;
+    max-height: 400px;
+   	min-width: 250px;
+	min-height: 400px;
+    height: 100%;
+    padding: 0px;
+    margin: 5px;
+}
+.card-header{
+	max-width: 250px;
+	max-height: 400px;
+	min-width: 250px;
+	min-height: 400px;
+	height: 100%;
+}
+.card-body{
+	max-width: 250px;
+	max-height: 400px;
+	min-width: 250px;
+	min-height: 400px;
+	height: 100%;
 }

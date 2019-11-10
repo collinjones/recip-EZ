@@ -72,15 +72,14 @@
 			$recipeDescription = $row['RecipeDescription'];
 			$recipePictureURL = $row['RecipePictureURL'];
 
-			echo "<div class='container'>";
-				echo "<div class='card bg-light'>";
+				echo "<div class='card flex-item'>";
 					echo "<div class='card-header'>" . $recipeName;
 						echo "<div class='card-body'>";
-							echo "<img src='" . $recipePictureURL ."' alt='not found' style='max-width:250px;width:100%'> </img>";
+							echo "<img src='" . $recipePictureURL ."' alt='not found' style='min-width:167px;max-width:200px;width:100%'> </img>";
 							echo "<br>";
 							echo "<p>" . $recipeDescription . "</p>";
 							echo "<a href='" . $recipeURL ."'> Go here </a>";
-			echo "</div></div></div></div>";
+				echo "</div></div></div>";
 		}
 	}
 }
