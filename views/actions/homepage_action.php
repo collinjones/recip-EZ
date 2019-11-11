@@ -69,12 +69,14 @@
 			$recipePictureURL = $row['RecipePictureURL'];
 
 				echo "<div class='card flex-item'>";
-					echo "<div class='card-header'>" . $recipeName;
+					echo "<div class='card-header' style='background-color:rgba(0,0,0,0);border-bottom:none'>" . $recipeName;
 						echo "<div class='card-body'>";
 							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:200px;width:200px;'> </img>";
 							echo "<br>";
 							echo "<p>" . $recipeDescription . "</p>";
-							echo "<a href='" . $recipeURL ."'> Go here </a>";
+							echo '<div style="text-align:center" class="form-group">
+										<a href="' . $recipeURL . '" class="btn-info" target="_blank">Link To Recipe</a>
+										</div>';
 				echo "</div></div></div>";
 		}
 	}
