@@ -130,6 +130,9 @@ h2{
 	background: rgb(158,197,207);
 	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%);
 }
+
+
+
 .filter-container {
 	margin: 5px;
 }
@@ -157,13 +160,15 @@ h2{
 }
 .card.flex-item{
     align-items: center;
-	display: flex;
-	justify-content: center;
+		display: flex;
+		justify-content: center;
    	width: 300px;
    	height: 325px;
     padding: 0px;
     margin: 5px;
-    position: sticky;
+		background: rgb(204,148,241);
+		background: linear-gradient(180deg, rgba(204,148,241,0.3816877092633929) 3%, rgba(193,148,241,1) 32%, rgba(255,230,0,0) 100%);
+		border-color: rgba(117, 128, 128, .86);
 }
 .card-body{
 	padding: 0;
