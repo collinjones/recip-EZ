@@ -6,7 +6,6 @@
 	$exclusions_array = array();
 	$ingredient_string = "";
 	$exclusion_string= "";
-	$query = false;
 
 	// inclusions
 	if(isset($_POST['check_list'])){
@@ -14,7 +13,6 @@
 		foreach($_POST['check_list'] as $value){
 			array_push($ingredient_array, $value);
 		}
-		$query = true;
 		// need last element in array to format the last comma correctly
 		$lastIngredient = end($ingredient_array);
 		foreach($ingredient_array as $value){

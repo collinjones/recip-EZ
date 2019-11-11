@@ -98,70 +98,8 @@
 						</div>
 						<h2 class='filter-form'>Ingredient Filter</h2>
 						<br>
-						<!-- MEATS SELECTIONS -->
-							<?php include'actions/homepage_checkbox_action.php';?>
-						<!-- VEGETABLES SELECTIONS -->
-						<h4>VEGETABLES</h4>
-						<div style="padding: 5%" class="form-row">
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="7" type="checkbox" class="custom-control-input" id="green_beans">
-								    <label class="custom-control-label" for="green_beans">Green Beans</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="8" type="checkbox" class="custom-control-input" id="kale">
-								    <label class="custom-control-label" for="kale">Kale</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="9" type="checkbox" class="custom-control-input" id="bell_peppers">
-								    <label class="custom-control-label" for="bell_peppers">Bell Peppers</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="10" type="checkbox" class="custom-control-input" id="cucumber">
-								    <label class="custom-control-label" for="cucumber">Cucumber</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="11" type="checkbox" class="custom-control-input" id="brussel_sprouts">
-								    <label class="custom-control-label" for="brussel_sprouts">Brussel Sprouts</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="12" type="checkbox" class="custom-control-input" id="zuccinni">
-								    <label class="custom-control-label" for="zuccinni">Zuccinni</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="13" type="checkbox" class="custom-control-input" id="eggplant">
-								    <label class="custom-control-label" for="eggplant">Eggplant</label>
-								</div>
-							</div>
-						</div>
-						<!-- SPICES SELECTIONS -->
-						<h4>SPICES</h4>
-						<div style="padding: 5%" class="form-row">
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="14" type="checkbox" class="custom-control-input" id="salt">
-								    <label class="custom-control-label" for="salt">Salt</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="15" type="checkbox" class="custom-control-input" id="pepper">
-								    <label class="custom-control-label" for="pepper">Pepper</label>
-								</div>
-							</div>
-						</div>
+						<!-- echoed out inside homepage_checkbox_action.php -->
+						<?php include'actions/homepage_checkbox_action.php';?>
 						<!-- EXLUSIONS -->
 						<div style="padding:5%" class="dropdown-menu-center">
 						  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
