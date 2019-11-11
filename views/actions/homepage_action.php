@@ -74,7 +74,7 @@
 							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:200px;width:200px;'> </img>";
 							echo "<br>";
 							echo "<p>" . $recipeDescription . "</p>";
-							echo "<a href='" . $recipeURL ."'> Go here </a>";
+							echo "<a href='" . $recipeURL ."' target='_blank'> Go here </a>";
 				echo "</div></div></div>";
 		}
 	}
