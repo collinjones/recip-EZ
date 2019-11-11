@@ -153,21 +153,20 @@ h2{
 .flex-parent{
 	  display: flex;
 	  flex-wrap: wrap;
-	  justify-content: center;
-	  flex-direction: row;
-	  align-items: flex-start;
-	  width: 50%;
+	  min-width: 300px;
 }
 .card.flex-item{
     align-items: center;
 	display: flex;
 	justify-content: center;
-    width: 200px;
-    max-height: 10%;
-   	min-width: 250px;
-	min-height: 400px;
+   	width: 300px;
+   	height: 325px;
     padding: 0px;
     margin: 5px;
+    position: sticky;
+}
+.card-body{
+	padding: 0;
 }
 .card-header{
 	height: 100%;

@@ -44,11 +44,15 @@
 				document.getElementById('steak').disabled = true;
 				document.getElementById('chicken').disabled = true;
 				document.getElementById('salmon').disabled = true;
-				document.getElementById('pork').disabled = true;				
+				document.getElementById('pork').disabled = true;
+				document.getElementById('bacon').disabled = true;
+				document.getElementById('eggs').disabled = true;				
 				document.getElementById('EX_steak').checked = true;
 				document.getElementById('EX_chicken').checked = true;
 				document.getElementById('EX_salmon').checked = true;
 				document.getElementById('EX_pork').checked = true;
+				document.getElementById('EX_bacon').checked = true;
+				document.getElementById('EX_eggs').checked = true;
 
 			}
 		}
@@ -210,23 +214,33 @@
 						  	<div style="padding:5%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						  		<input name='exclusion_list[]' id='EX_steak' value='1' type="checkbox">
 						  			Steak
-						  		<input name='exclusion_list[]' id='EX_chicken' value='2' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_eggs' value='2' type="checkbox">
+						  			Eggs
+						  		<input name='exclusion_list[]' id='EX_chicken' value='3' type="checkbox">
 						  			Chicken
-						  		<input name='exclusion_list[]' id='EX_salmon' value='3' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_salmon' value='4' type="checkbox">
 						  			Salmon
-						  		<input name='exclusion_list[]' id='EX_pork' value='4' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_pork' value='5' type="checkbox">
 						  			Pork
-						  		<input name='exclusion_list[]' id='EX_greenbeans' value='5' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_bacon' value='6' type="checkbox">
+						  			Bacon
+						  		<input name='exclusion_list[]' id='EX_greenbeans' value='7' type="checkbox">
 						  			Green Beans
-						  		<input name='exclusion_list[]' id='EX_brusselsprouts' value='6' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_kale' value='8' type="checkbox">
+						  			Kale
+						  		<input name='exclusion_list[]' id='EX_bellpeppers' value='9' type="checkbox">
+						  			Bell Peppers
+						  		<input name='exclusion_list[]' id='EX_cucumber' value='10' type="checkbox">
+						  			Cucumber
+						  		<input name='exclusion_list[]' id='EX_brusselsprouts' value='11' type="checkbox">
 						  			Brussel Sprouts
-						  		<input name='exclusion_list[]' id='EX_zuccinni' value='7' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_zuccinni' value='12' type="checkbox">
 						  			Zuccinni
-						  		<input name='exclusion_list[]' id='EX_eggplant' value='8' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_eggplant' value='13' type="checkbox">
 						  			Eggplant
-						  		<input name='exclusion_list[]' id='EX_salt' value='9' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_pepper' value='14' type="checkbox">
 						  			Salt
-						  		<input name='exclusion_list[]' id='EX_pepper' value='10' type="checkbox">
+						  		<input name='exclusion_list[]' id='EX_pepper' value='15' type="checkbox">
 						  			Pepper
 						  	</div>
 						</div>

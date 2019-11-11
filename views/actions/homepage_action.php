@@ -71,7 +71,7 @@
 				echo "<div class='card flex-item'>";
 					echo "<div class='card-header'>" . $recipeName;
 						echo "<div class='card-body'>";
-							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:200px;width:200px;width:100%'> </img>";
+							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:200px;width:200px;'> </img>";
 							echo "<br>";
 							echo "<p>" . $recipeDescription . "</p>";
 							echo "<a href='" . $recipeURL ."'> Go here </a>";
