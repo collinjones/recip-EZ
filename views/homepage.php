@@ -40,13 +40,7 @@
 			var vegetarian = '<?php echo $vegetarian; ?>';
 
 			// check if vegetarian user is true (1)
-			if(vegetarian == 1){
-				document.getElementById('steak').disabled = true;
-				document.getElementById('chicken').disabled = true;
-				document.getElementById('salmon').disabled = true;
-				document.getElementById('pork').disabled = true;
-				document.getElementById('bacon').disabled = true;
-				document.getElementById('eggs').disabled = true;				
+			if(vegetarian == 1){		
 				document.getElementById('EX_steak').checked = true;
 				document.getElementById('EX_chicken').checked = true;
 				document.getElementById('EX_salmon').checked = true;
@@ -105,45 +99,7 @@
 						<h2 class='filter-form'>Ingredient Filter</h2>
 						<br>
 						<!-- MEATS SELECTIONS -->
-						<h4>MEATS</h4>
-						<div style="padding: 5%" class="form-row">
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="1" type="checkbox" class="custom-control-input" id="steak">
-								    <label class="custom-control-label" for="steak">Steak</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="2" type="checkbox" class="custom-control-input" id="eggs">
-								    <label class="custom-control-label" for="eggs">Eggs</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="3" type="checkbox" class="custom-control-input" id="chicken">
-								    <label class="custom-control-label" for="chicken">Chicken</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="4" type="checkbox" class="custom-control-input" id="salmon">
-								    <label class="custom-control-label" for="salmon">Salmon</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="5" type="checkbox" class="custom-control-input" id="pork">
-								    <label class="custom-control-label" for="pork">Pork</label>
-								</div>
-							</div>
-							<div class="form-column" style="padding: 5px">
-								<div class="custom-control custom-checkbox">
-								    <input name="check_list[]" value="6" type="checkbox" class="custom-control-input" id="bacon">
-								    <label class="custom-control-label" for="bacon">Bacon</label>
-								</div>
-							</div>
-						</div>
+							<?php include'actions/homepage_checkbox_action.php';?>
 						<!-- VEGETABLES SELECTIONS -->
 						<h4>VEGETABLES</h4>
 						<div style="padding: 5%" class="form-row">

@@ -87,7 +87,7 @@
 						<input id="veg" name="vegetarian" type="checkbox" class="form-control">
 					</div>
 					<div style="text-align:center" class="form-group">
-                    	<input name="send" type="submit" class="btnSubmit" value="Submit" />
+                    	<input name="send" type="submit" class="btnSubmit" value="Save" />
 					</div>
 
 					<!-- ADD DELETE ACCOUNT HERE -->
