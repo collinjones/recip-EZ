@@ -1,7 +1,7 @@
 <?php
 	include'connect_action.php';
 
-	$ingredient_count = 1;
+	$ingredient_count = 25; // TODO dynamically update
 	$ingredient_array = array();
 	$exclusions_array = array();
 	$ingredient_string = "";
@@ -26,11 +26,10 @@
 	}
 	// if the user selected no items, then all ingredients are added.
 	else{
-		$ingredient_string .= -1;
-		for($ingredient_count=1; $ingredient_count <= 10; $ingredient_count++){
-			$ingredient_string .= $ingredient_count . ", ";
-			if($ingredient_count == 10){
-				$ingredient_string .= $ingredient_count;
+		for($i=1; $i <= $ingredient_count; $i++){
+			$ingredient_string .= $i . ", ";
+			if($i == 25){
+				$ingredient_string .= $i;
 			}
 		}
 	}
