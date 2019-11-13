@@ -58,16 +58,16 @@
 				<div class="filter-form-box">
 					<form class="filter-form" method="post" action="">
 						<!-- TITLE OF RECIPE -->
-						
+						<input name="recipeName">
                         
                         <!-- DECRIPTION OF RECIPE -->
-
+						<input name="description">
 
                         <!-- URL FOR RECIPE -->
-
+						<input name="recipeURL">
 
                         <!-- URL OF IMAGE FOR RECIPE -->
-
+						
 
 						<!-- MEATS SELECTIONS -->
 						<h4>MEATS</h4>
