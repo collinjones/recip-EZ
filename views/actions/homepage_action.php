@@ -50,9 +50,8 @@
 		}
 	}
 	else{
-		$exclusion_string .= '-1';
+		$exclusion_string = '-1';
 	}
-
 	$recipe_query = "SELECT *, Count(*) as 'Likeness'
 					    FROM Recipes R, (SELECT * FROM Ingredients WHERE IngredientCode in ($ingredient_string)) I #List of selected Ingredients
 					    WHERE R.RecipeID = I.RecipeID AND R.RecipeID NOT IN (SELECT RecipeID FROM Ingredients WHERE IngredientCode in ($exclusion_string)) #Exclusion list
