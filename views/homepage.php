@@ -112,8 +112,6 @@
 
 						<?php include'actions/homepage_checkbox_action.php';?>
 						<!-- EXLUSIONS -->
-
-						<?php include'actions/homepage_exclusion_checkbox_action.php'?>
 						<!-- SUBMIT BUTTON -->
 						<div style="text-align:center" class="form-group">
 	                    	<input name="send" type="submit" class="btnSubmit" value="Submit" />

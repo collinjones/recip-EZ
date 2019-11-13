@@ -132,9 +132,6 @@ h2{
 	background: rgb(158,197,207);
 	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%);
 }
-
-
-
 .filter-container {
 	margin: 5px;
 }
@@ -160,9 +157,10 @@ h2{
 	  flex-wrap: wrap;
 	  min-width: 300px;
 	  width: 70%;
+	  height: 100%;
 }
 .card.flex-item{
-    align-items: center;
+    align-items: stretch;
 	display: flex;
 	justify-content: center;
    	width: 300px;
@@ -171,12 +169,18 @@ h2{
     margin: 5px;
     position: sticky;
 		background: rgb(204,148,241);
+	background: linear-gradient(0deg, rgba(115,254,255,1) 0%, rgba(233,158,255,1) 100%);  
 		background: linear-gradient(242deg, rgba(204,148,241,0.3816877092633929) 3%, rgba(193,148,241,1) 32%, rgba(255,230,0,0) 100%);
 }
 .card-body{
 	padding: 0;
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+    text-align: center;
 }
 .card-header{
 	height: 100%;
 	padding: 0;
+	text-align: center;
 }
