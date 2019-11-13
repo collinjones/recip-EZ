@@ -120,14 +120,11 @@
 	echo "<div id='exclusion' style='visibility:collapse;height:0px;overflow:hidden;'><br>";
 
 
-	/* - MEATS SECTION -
+	/* - EXCLUSION MEATS SECTION -
 		* This is for printing out each checkbox in
-			homepage.php that is related to meats.
-		* If the user is a vegetarian, then else is executed.
-			No checkboxes are printed and an info box mentioning
-			the user has this set in their settings.
+			homepage.php that is related to exluding meats.
 	*/
-	echo '<h4>MEATS</h4>';
+	echo '<h4>Meat Exclusions</h4>';
 	echo '<div style="padding: 5%" class="form-row">';
 		if(mysqli_num_rows($meat_result) > 0){
 			while($row = mysqli_fetch_array($meat_result)){
@@ -141,11 +138,11 @@
 
 	echo '<br>';
 
-	/* - VEGETABLES SECTION -
+	/* - EXCLUDING VEGETABLES SECTION -
 		* This is for printing out each checkbox in
-			homepage.php that is related to vegetables.
+			homepage.php that is related to excluding vegetables.
 	*/
-	echo '<h4>VEGETABLES</h4>';
+	echo '<h4>Vegetable Exlusions</h4>';
 	echo '<div style="padding: 5%" class="form-row">';
 	if(mysqli_num_rows($vegetable_result) > 0){
 		while($row = mysqli_fetch_array($vegetable_result)){
@@ -158,11 +155,11 @@
 	}
 	echo '<br>';
 
-	/* - SPICES SECTION -
+	/* - EXCLUDING SPICES SECTION -
 		* This is for printing out each checkbox in
-			homepage.php that is related to spices.
+			homepage.php that is related to excluding spices.
 	*/
-	echo '<h4>SPICES</h4>';
+	echo '<h4>Spice Exclusions</h4>';
 	echo '<div style="padding: 5%" class="form-row">';
 	if(mysqli_num_rows($spices_result) > 0){
 		while($row = mysqli_fetch_array($spices_result)){
@@ -175,11 +172,11 @@
 	}
 	echo '<br>';
 
-	/* - DAIRY SECTION -
+	/* - EXCLUDING DAIRY SECTION -
 		* This is for printing out each checkbox in
-			homepage.php that is related to dairy.
+			homepage.php that is related to excluding dairy.
 	*/
-	echo '<h4>DAIRY</h4>';
+	echo '<h4>Dairy Exclusions</h4>';
 	echo '<div style="padding: 5%" class="form-row">';
 	if(mysqli_num_rows($dairy_result) > 0){
 		while($row = mysqli_fetch_array($dairy_result)){
