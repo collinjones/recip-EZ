@@ -3,7 +3,7 @@ include'connect_action.php';
 $ingredient_array = array();
 $ingredientString = "";
 
-if(isset($POST['check_list']))
+if(!empty($_POST['check_list']))
 {
     //load all ingredients into an array
     foreach($_POST['check_list'] as $ingredient)
@@ -20,18 +20,21 @@ if(isset($POST['check_list']))
     //load recipe URL
     $recipeURL = $_POST['recipeURL'];
 
+
     //push recipe url, recipe name, recipe description and number of ingredients to recipes table
     $addMeta_query = "INSERT INTO recipes (RecipeURL,TotalIngredients,RecipeName,RecipeDescription) 
-                        VALUES (($recipeURL),(count($ingredient_array)),($recipeName),($description)";
+                        VALUES ('".$recipeURL."',count($ingredient_array),'".$recipeName."','".$description."')";
 
     //store the recipeID
     $findRecipeID_query = "SELECT RecipeID FROM Recipes WHERE (RecipeName = ($recipeName))";
     $recipeID = mysqli_query($conn, $findRecipeID_query);
 
     //find the ingredient ID for each ingredient in array
+    $ingredientName = 'blank';
     $findIngredientCode_query = "SELECT IngredientCode FROM ingredientname WHERE IngredientName = ($ingredientName)";
     foreach($ingredient_array as $ingredientName)
     {
+        $findIngredientCode_query = "SELECT IngredientCode FROM ingredientname WHERE IngredientName = '".$ingredientName."'";
         $result = mysqli_query($conn, $findIngredientCode_query);
         array_push($ingredientCodes, $result);
     }
