@@ -115,7 +115,7 @@ h2{
 }
 .filter-form{
 	padding: 5%;
-	height: 100%;
+	height: auto;
 }
 .filter-form h4{
 	text-align: center;
@@ -127,6 +127,8 @@ h2{
 	position:sticky;
 	margin: 5px;
 	width: 250px;
+	height:auto;
+	max-height:auto;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 	background: rgb(158,197,207);
 	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%);
@@ -176,8 +178,9 @@ h2{
     padding: 0px;
     margin: 5px;
     position: sticky;
- 	background: rgb(115,254,255);
+		background: rgb(204,148,241);
 	background: linear-gradient(0deg, rgba(115,254,255,1) 0%, rgba(233,158,255,1) 100%);  
+		background: linear-gradient(242deg, rgba(204,148,241,0.3816877092633929) 3%, rgba(193,148,241,1) 32%, rgba(255,230,0,0) 100%);
 }
 .card-body{
 	padding: 0;

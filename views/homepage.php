@@ -3,10 +3,10 @@
 	include'actions/connect_action.php';
 	$usr = $_SESSION['user'];
 
-	/* check if user logging in is currently set as vegetarian 
+	/* check if user logging in is currently set as vegetarian
 		(for purpose of updating homepage of current settings)*/
-	$veg_check_query = "SELECT vegetarian 
-						FROM users 
+	$veg_check_query = "SELECT vegetarian
+						FROM users
 						WHERE usernames = '$usr'";
 	foreach($conn->query($veg_check_query) as $row){
 		$result = $row['vegetarian'];
@@ -40,20 +40,23 @@
 			var vegetarian = '<?php echo $vegetarian; ?>';
 
 			// check if vegetarian user is true (1)
-			if(vegetarian == 1){		
+			if(vegetarian == 1){
 				document.getElementById('EX_steak').checked = true;
 				document.getElementById('EX_chicken').checked = true;
 				document.getElementById('EX_salmon').checked = true;
 				document.getElementById('EX_pork').checked = true;
 				document.getElementById('EX_bacon').checked = true;
 				document.getElementById('EX_eggs').checked = true;
+				document.getElementById('EX_cod').checked = true;
+				document.getElementById('EX_trout').checked = true;
+				document.getElementById('EX_beef').checked = true;
 
 			}
 		}
 	</script>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
-<body onload="placeHomepageSettings()">
+<body onload="placeHomepageSettings()" style="height:auto">
 
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -85,7 +88,7 @@
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
-	<div class="filter-container">
+	<div class="filter-container" style="padding-bottom:10px">
 		<div class="row">
 			<!-- LEFT COLUMN -->
 			<div class="column">
@@ -99,45 +102,16 @@
 						<h2 class='filter-form'>Ingredient Filter</h2>
 						<br>
 						<!-- echoed out inside homepage_checkbox_action.php -->
+						<script>
+							function showExclusions(numberOfElements) {
+								var x = document.getElementById("exclusion").style.visibility;
+								document.getElementById("exclusion").style.visibility = x == "visible" ? "collapse" : "visible";
+								document.getElementById("exclusion").style.height = x == "visible" ? "0px" : "auto";
+				    	}
+						</script>
+
 						<?php include'actions/homepage_checkbox_action.php';?>
 						<!-- EXLUSIONS -->
-						<div style="padding:5%" class="dropdown-menu-center">
-						  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    	Exlusions
-						  	</button>
-						  	<div style="padding:5%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						  		<input name='exclusion_list[]' id='EX_steak' value='1' type="checkbox">
-						  			Steak
-						  		<input name='exclusion_list[]' id='EX_eggs' value='2' type="checkbox">
-						  			Eggs
-						  		<input name='exclusion_list[]' id='EX_chicken' value='3' type="checkbox">
-						  			Chicken
-						  		<input name='exclusion_list[]' id='EX_salmon' value='4' type="checkbox">
-						  			Salmon
-						  		<input name='exclusion_list[]' id='EX_pork' value='5' type="checkbox">
-						  			Pork
-						  		<input name='exclusion_list[]' id='EX_bacon' value='6' type="checkbox">
-						  			Bacon
-						  		<input name='exclusion_list[]' id='EX_greenbeans' value='7' type="checkbox">
-						  			Green Beans
-						  		<input name='exclusion_list[]' id='EX_kale' value='8' type="checkbox">
-						  			Kale
-						  		<input name='exclusion_list[]' id='EX_bellpeppers' value='9' type="checkbox">
-						  			Bell Peppers
-						  		<input name='exclusion_list[]' id='EX_cucumber' value='10' type="checkbox">
-						  			Cucumber
-						  		<input name='exclusion_list[]' id='EX_brusselsprouts' value='11' type="checkbox">
-						  			Brussel Sprouts
-						  		<input name='exclusion_list[]' id='EX_zuccinni' value='12' type="checkbox">
-						  			Zuccinni
-						  		<input name='exclusion_list[]' id='EX_eggplant' value='13' type="checkbox">
-						  			Eggplant
-						  		<input name='exclusion_list[]' id='EX_pepper' value='14' type="checkbox">
-						  			Salt
-						  		<input name='exclusion_list[]' id='EX_pepper' value='15' type="checkbox">
-						  			Pepper
-						  	</div>
-						</div>
 						<!-- SUBMIT BUTTON -->
 						<div style="text-align:center" class="form-group">
 	                    	<input name="send" type="submit" class="btnSubmit" value="Submit" />
