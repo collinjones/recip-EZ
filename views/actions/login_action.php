@@ -1,5 +1,4 @@
 <?php
-ob_start();
 include'actions/connect_action.php';
 
 $usr = $_POST['username'];
