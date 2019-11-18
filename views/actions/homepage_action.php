@@ -67,10 +67,10 @@
 				echo "<div class='card flex-item'>";
 					echo "<div class='card-header' style='border-bottom:none'>" . $recipeName;
 						echo "<div class='card-body'>";
-							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:200px;width:200px;'> </img>";
+							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:100px;width:100px;'> </img>";
 							echo "<br>";
 							echo "<p>" . $recipeDescription . "</p>";
-							echo '<div style="text-align:center" class="form-group">
+							echo '<div style="text-align:center" class="form-group link-buttons">
 										<a href="' . $recipeURL . '" class="btn-info" target="_blank">Link To Recipe</a>
 										</div>';
 				echo "</div></div></div>";
