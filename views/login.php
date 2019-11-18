@@ -81,6 +81,17 @@
                     <div style="text-align:center" class="form-group">
                         <input name="send" type="submit" class="btnSubmit" value="Login" />
                     </div>
+                    
+                    <!-- Password requirements -->
+                    <div id="message" style="display:block">
+						<h3>Password must contain the following:</h3>
+							<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+							<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+							<p id="number" class="invalid">A <b>number</b></p>
+							<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+							<p id="match" class="invalid">Password and Confirm Password Match</p>
+					</div>
+
                     <div style="text-align:center" class="form-group">
                         <a href="registration_page.php" class="btn-info">Need an account?</a>
                     </div>

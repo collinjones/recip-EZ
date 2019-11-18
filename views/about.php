@@ -59,8 +59,15 @@
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
-	<div class="container">
-		
+	<div class="filter-form-box">
+	<h1> About Us </h1>
+	<p> Our team decided to develop a recipe searching tool. We are all computer science major's who eat food, so it seemed like a fitting and useful project idea. 
+	<br>
+	To get started, either login to your exsisting account, or click create an account if you are a new user. The login feature allows us to save personalized settings and recipes for each user. After logging in, the current user is directed to the home page where the real magic happens. 
+	<br>
+	From here the user can either search for a specific recipe, or check boxes of ingredients they currently have and would like to make a meal out of. Our website then populates a list of recipes similar to the ingredients the user included or exluded.
+	<br>
+	The account settings tab will allow the user to specify certain dietary options (i.e vegetarian), change their username, and delete ther account should they choose. To log out of you session click the logout tab.
 	</div>
 
     <!-- FOOTER -->
