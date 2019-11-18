@@ -1,6 +1,5 @@
 <?php
 	include 'connect_action.php';
-
 	/* - QUERIES -
  		* these are for selecting the names and codes
  			of the specific ingredients where the ingredient
@@ -129,9 +128,10 @@
 	echo '<h4>Meat Exclusions</h4>';
 	echo '<div style="padding: 5%" class="form-row">';
 		if(mysqli_num_rows($meat_result) > 0){
+			$isVeg = $_SESSION['vegetarian'] ? "checked" : "";
 			while($row = mysqli_fetch_array($meat_result)){
 				echo '<div style="margin-left: 5px;" class="custom-control custom-checkbox">';
-				echo '<input name="exclusion_list[]" value="'. $row['IngredientCode'].'"type="checkbox" class="custom-control-input" id="EX_'. strtolower($row['IngredientName']) .'">';
+				echo '<input name="exclusion_list[]" value="'. $row['IngredientCode'].'"type="checkbox" class="custom-control-input" id="EX_'. strtolower($row['IngredientName']) .'" ' . $isVeg .'>';
 				echo '<label class="custom-control-label" for="EX_' . strtolower($row['IngredientName']) . '">'. $row['IngredientName'] .'</label>';
 				echo '</div>';
 			}

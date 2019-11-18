@@ -34,26 +34,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../resources/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
-	<script>
-		function placeHomepageSettings(){
-			//receive vegetarian variable from php code above
-			var vegetarian = '<?php echo $vegetarian; ?>';
-
-			// check if vegetarian user is true (1)
-			if(vegetarian == 1){
-				document.getElementById('EX_steak').checked = true;
-				document.getElementById('EX_chicken').checked = true;
-				document.getElementById('EX_salmon').checked = true;
-				document.getElementById('EX_pork').checked = true;
-				document.getElementById('EX_bacon').checked = true;
-				document.getElementById('EX_eggs').checked = true;
-				document.getElementById('EX_cod').checked = true;
-				document.getElementById('EX_trout').checked = true;
-				document.getElementById('EX_beef').checked = true;
-
-			}
-		}
-	</script>
 </head>
 <!------------ CONTENT STARTS HERE --------------->
 <body onload="placeHomepageSettings()" style="height:auto">
@@ -94,11 +74,15 @@
 			<div class="column">
 				<div class="filter-form-box">
 					<form class="filter-form" method="post" action="">
+
 						<!-- SEARCH -->
+						<!--
 						<h2 class="filter-form">Recipe Search</h2>
+
 						<div class="form-row" style="padding: 5px">
 							<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
 						</div>
+						-->
 						<h2 class='filter-form'>Ingredient Filter</h2>
 						<br>
 						<!-- echoed out inside homepage_checkbox_action.php -->
