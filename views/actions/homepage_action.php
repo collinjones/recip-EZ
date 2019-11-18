@@ -65,7 +65,7 @@
 			$recipePictureURL = $row['RecipePictureURL'];
 
 				echo "<div class='card flex-item'>";
-					echo "<div class='card-header' style='background-color:rgba(0,0,0,0);border-bottom:none'>" . $recipeName;
+					echo "<div class='card-header' style='border-bottom:none'>" . $recipeName;
 						echo "<div class='card-body'>";
 							echo "<img src='" . $recipePictureURL ."' alt='not found' style='height:200px;width:200px;'> </img>";
 							echo "<br>";

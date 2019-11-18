@@ -115,8 +115,10 @@
 	mysqli_data_seek($meat_result, 0);
 	mysqli_data_seek($vegetable_result, 0);
 
-
-	echo "<button class='btn btn-secondary' type='button' id='dropdownMenuButton' onclick=showExclusions(". $totalResults .")> Show Exclusions </button><br>";
+	//This creates the exclusion button and the div that hides all the buttons. We also center the button here.
+	echo "<div style='text-align:center'>";
+	echo "<button class='btn btn-secondary' type='button' id='dropdownMenuButton' onclick=showExclusions(". $totalResults .")> Show Exclusions </button>";
+	echo "</div><br>";
 	echo "<div id='exclusion' style='visibility:collapse;height:0px;overflow:hidden;'><br>";
 
 
