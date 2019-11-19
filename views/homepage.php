@@ -36,7 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
 </head>
 <!------------ CONTENT STARTS HERE --------------->
-<body onload="placeHomepageSettings()" style="height:auto">
+<body onload="placeHomepageSettings()">
 
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">

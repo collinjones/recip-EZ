@@ -6,8 +6,7 @@ html,body {
 	padding: 0;
 	display: table;
 	font-family: 'Roboto Condensed', sans-serif;
-	background: rgb(147,95,182);
-	background: linear-gradient(90deg, rgba(147,95,182,1) 0%, rgba(255,144,144,1) 58%, rgba(255,188,93,1) 100%);
+	background: #81bef7;
 }
 /* footer settings */
 footer {
@@ -129,8 +128,7 @@ h2{
 	height:auto;
 	max-height:auto;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-	background: rgb(158,197,207);
-	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%);
+	background: #99aec2;
 }
 .filter-container {
 	margin: 5px;
@@ -157,8 +155,7 @@ h2{
 	display: block;
 	position: absolute;
 	bottom: 0%;
-	margin: 0;
-	margin-bottom: 2%;
+	margin: 5px;
 
 }
 .flex-parent{
@@ -170,14 +167,15 @@ h2{
 }
 .card.flex-item{
     align-items: stretch;
-		display: flex;
-		justify-content: center;
+	display: flex;
+	justify-content: center;
     padding: 0px;
     margin: 5px;
-		height: 250px;
-		width: 300px;
+	height: 250px;
+	width: 300px;
     position: sticky;
-		background: rgb(255, 153, 153);
+    border-color: #000;
+	background: #fff;
 }
 .card-body{
 	padding: 0;
