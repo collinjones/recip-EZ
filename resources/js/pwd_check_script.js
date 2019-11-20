@@ -1,6 +1,6 @@
 //password confirmation script
 
-
+function checkPass(){
 	var myInput = document.getElementById("psw");
     var confirmMyInput = document.getElementById("cpsw");
 	var letter = document.getElementById("letter");
@@ -66,8 +66,7 @@
 
                 enableButton(letter, capital, number, length, match);
     }
-
-
+}
 
 function enableButton(letter, capital, number, length, match) {
 
