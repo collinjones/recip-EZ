@@ -228,3 +228,24 @@ form .settings-form{
 .about-us p{
 	margin: 5px;
 }
+/* REGISTRATION PASSWORD CHECK */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: '\2713';
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: '\00D7';
+}
