@@ -67,7 +67,7 @@
 						<input name="recipeURL">
 
                         <!-- URL OF IMAGE FOR RECIPE -->
-						
+						<input name="recipeimg">						
 
 						<!-- MEATS SELECTIONS -->
 						<h4>MEATS</h4>
@@ -140,34 +140,6 @@
 								    <label class="custom-control-label" for="pepper">Pepper</label>
 								</div>
 							</div>
-						</div>
-						<!-- EXLUSIONS -->
-						<div style="padding:5%" class="dropdown-menu-center">
-						  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    	Exlusions
-						  	</button>
-						  	<div style="padding:5%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						  		<input name='exclusion_list[]' value='1' type="checkbox">
-						  			Steak
-						  		<input name='exclusion_list[]' value='2' type="checkbox">
-						  			Chicken
-						  		<input name='exclusion_list[]' value='3' type="checkbox">
-						  			Salmon
-						  		<input name='exclusion_list[]' value='4' type="checkbox">
-						  			Pork
-						  		<input name='exclusion_list[]' value='5' type="checkbox">
-						  			Green Beans
-						  		<input name='exclusion_list[]' value='6' type="checkbox">
-						  			Brussel Sprouts
-						  		<input name='exclusion_list[]' value='7' type="checkbox">
-						  			Zuccinni
-						  		<input name='exclusion_list[]' value='8' type="checkbox">
-						  			Eggplant
-						  		<input name='exclusion_list[]' value='9' type="checkbox">
-						  			Salt
-						  		<input name='exclusion_list[]' value='10' type="checkbox">
-						  			Pepper
-						  	</div>
 						</div>
 						<!-- SUBMIT BUTTON -->
 						<div style="text-align:center" class="form-group">
