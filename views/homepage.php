@@ -74,18 +74,10 @@
 			<div class="column">
 				<div class="filter-form-box">
 					<form class="filter-form" method="post" action="">
-
-						<!-- SEARCH -->
-						<!--
-						<h2 class="filter-form">Recipe Search</h2>
-
-						<div class="form-row" style="padding: 5px">
-							<input type="search" class="form-control" id="searchText" placeholder="Search Recipes">
-						</div>
-						-->
 						<h2 class='filter-form'>Ingredient Filter</h2>
 						<br>
 						<!-- echoed out inside homepage_checkbox_action.php -->
+						<?php include'actions/homepage_checkbox_action.php';?>
 						<script>
 							function showExclusions(numberOfElements) {
 								var x = document.getElementById("exclusion").style.visibility;
@@ -93,9 +85,6 @@
 								document.getElementById("exclusion").style.height = x == "visible" ? "0px" : "auto";
 				    	}
 						</script>
-
-						<?php include'actions/homepage_checkbox_action.php';?>
-						<!-- EXLUSIONS -->
 						<!-- SUBMIT BUTTON -->
 						<div style="text-align:center" class="form-group">
 	                    	<input name="send" type="submit" class="btnSubmit" value="Submit" />

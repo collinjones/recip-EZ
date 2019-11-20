@@ -228,24 +228,47 @@ form .settings-form{
 .about-us p{
 	margin: 5px;
 }
+
 /* REGISTRATION PASSWORD CHECK */
 .valid {
   color: green;
 }
-
 .valid:before {
   position: relative;
   left: -35px;
   content: '\2713';
 }
-
-/* Add a red text color and an "x" when the requirements are wrong */
 .invalid {
   color: red;
 }
-
 .invalid:before {
   position: relative;
   left: -35px;
   content: '\00D7';
 }
+
+/* ADD RECIPE CSS */
+.add-recipe-box{
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 1rem;
+	width: 600px;
+	height: 70%;
+	margin: auto;
+	margin-top: 10%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+ 	background: rgb(178,146,255);
+	background: linear-gradient(0deg, rgba(178,146,255,1) 0%, rgba(208,69,255,1) 67%); 
+}
+.add-recipe-box h4, p, input{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
