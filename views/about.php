@@ -61,7 +61,7 @@
 
 	<!-- MIDDLE CONTENT -->
 	<div class="about-us">
-		<h1> Website Information</h1>
+		<h1 style="color:white;"> Website Information</h1>
 		<p> Our team decided to develop a recipe searching tool. We are all computer science major's who eat food, so it seemed like a fitting and useful project idea. 
 		<br><br>
 		To get started, either login to your exsisting account, or click create an account if you are a new user. The login feature allows us to save personalized settings and recipes for each user. After logging in, the current user is directed to the home page where the real magic happens. 
