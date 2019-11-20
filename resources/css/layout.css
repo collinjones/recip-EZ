@@ -6,7 +6,8 @@ html,body {
 	padding: 0;
 	display: table;
 	font-family: 'Roboto Condensed', sans-serif;
-	background: #81bef7;
+	background: rgb(64,239,251);
+	background: linear-gradient(180deg, rgba(64,239,251,1) 0%, rgba(0,186,255,1) 67%); 
 }
 /* footer settings */
 footer {
@@ -59,8 +60,8 @@ h2{
 	margin: 0 auto;
 	padding: 0%;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-	background: rgb(158,197,207);
-	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%);
+ 	background: rgb(237,64,251);
+	background: linear-gradient(180deg, rgba(237,64,251,1) 0%, rgba(140,0,255,1) 67%); 
 }
 .login-form h3{
 	text-align: center;
@@ -128,7 +129,8 @@ h2{
 	height:auto;
 	max-height:auto;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-	background: #99aec2;
+	background: rgb(74,171,218);
+	background: linear-gradient(180deg, rgba(74,171,218,1) 0%, rgba(31,240,240,1) 67%); 
 }
 .filter-container {
 	margin: 5px;
@@ -147,45 +149,64 @@ h2{
 	background: rgb(158,197,207);
 	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%);
 }
-.form-group{
-	margin: 5px;
-}
 .form-group.link-buttons{
-	width: 100%;
 	display: block;
-	position: absolute;
 	bottom: 0%;
 	margin: 5px;
 
 }
-.flex-parent{
-	  display: flex;
-	  flex-wrap: wrap;
-	  min-width: 300px;
-	  width: 70%;
-	  height: 100%;
+/* FILTER RESULTS CSS 
+	Flexbox is being used to dynamically wrap each individual result 
+		card as the user resizes the screen width. 
+		This is primarily for mobile users, but it also prevents 
+		the content of the website from being out of sight.
+*/
+.flex-parent{ /* parent container that holds all of our result card */
+	display: flex;
+	flex-wrap: wrap;
+	min-width: 300px;
+	width: 70%;
+	height: 100%;
 }
-.card.flex-item{
+.card.flex-item{ /* box for each result card */
     align-items: stretch;
 	display: flex;
 	justify-content: center;
     padding: 0px;
     margin: 5px;
-	height: 250px;
+	height: 250px; 
 	width: 300px;
     position: sticky;
-    border-color: #000;
-	background: #fff;
+    border-color: #000; /* result card border color */
+	background: #fff; /* result card background color */
 }
-.card-body{
+.card-body{ /* content of each result card */
 	padding: 0;
     margin: 0 auto;
     float: none;
     margin-bottom: 10px;
     text-align: center;
 }
-.card-header{
+.card-header{ /* header for each result card */
 	height: 100%;
 	padding: 0;
 	text-align: center;
+}
+
+/* ABOUT US CSS */
+.about-us{
+	border-radius: 1rem;
+	width: 600px;
+	height: 400px;
+	margin: auto;
+	margin-top: 10%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+ 	background: rgb(178,146,255);
+	background: linear-gradient(0deg, rgba(178,146,255,1) 0%, rgba(208,69,255,1) 67%); 
+}
+.about-us h1{
+	text-align: center;
+}
+.about-us p{
+	margin: 5px;
 }
