@@ -126,8 +126,8 @@ h2{
 	position:sticky;
 	margin: 5px;
 	width: 250px;
-	height:auto;
-	max-height:auto;
+	height: auto;
+	max-height: auto;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 	background: rgb(74,171,218);
 	background: linear-gradient(180deg, rgba(74,171,218,1) 0%, rgba(31,240,240,1) 67%); 
@@ -144,10 +144,15 @@ h2{
 }
 .settings-box{
 	height: 100%;
-	margin: 0 auto;
+	border-radius: 1rem;
+	margin: auto;
+	margin-top: 10%;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 	background: rgb(158,197,207);
 	background: linear-gradient(0deg, rgba(158,197,207,1) 0%, rgba(182,149,198,1) 100%);
+}
+form .settings-form{
+	padding: 5px;
 }
 .form-group.link-buttons{
 	display: block;
