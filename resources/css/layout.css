@@ -120,7 +120,12 @@ h2{
 }
 .filter-form h4{
 	text-align: center;
-	color: #333;
+	color: white;
+	border-style: solid;
+	border-color: black;
+	border-radius: 1rem;
+	background: rgb(186,40,230);
+	background: linear-gradient(0deg, rgba(186,40,230,1) 0%, rgba(138,19,245,1) 100%); 
 }
 /* change values to move the filter box around */
 .filter-form-box {
