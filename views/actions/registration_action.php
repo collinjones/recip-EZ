@@ -1,12 +1,10 @@
 <?php
     include'connect_action.php';
-    $username = "";
-
     // error check flag
     $eflag = false;
 
     /*  Grabs username and both submitted passwords from
-        from html POST form 
+        from html form 
     */
 
     $username = $_POST['username'];
