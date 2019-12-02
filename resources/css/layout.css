@@ -7,7 +7,7 @@ html,body {
 	display: table;
 	font-family: 'Roboto Condensed', sans-serif;
 	background: rgb(64,239,251);
-	background: linear-gradient(180deg, rgba(64,239,251,1) 0%, rgba(0,186,255,1) 67%); 
+	background: linear-gradient(180deg, rgba(64,239,251,1) 0%, rgba(0,186,255,1) 67%);
 }
 /* footer settings */
 footer {
@@ -63,7 +63,7 @@ h2{
 	padding: 0%;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
  	background: rgb(237,64,251);
-	background: linear-gradient(180deg, rgba(237,64,251,1) 0%, rgba(140,0,255,1) 67%); 
+	background: linear-gradient(180deg, rgba(237,64,251,1) 0%, rgba(140,0,255,1) 67%);
 }
 .login-form h3{
 	text-align: center;
@@ -125,7 +125,7 @@ h2{
 	border-color: black;
 	border-radius: 1rem;
 	background: rgb(186,40,230);
-	background: linear-gradient(0deg, rgba(186,40,230,1) 0%, rgba(138,19,245,1) 100%); 
+	background: linear-gradient(0deg, rgba(186,40,230,1) 0%, rgba(138,19,245,1) 100%);
 }
 /* change values to move the filter box around */
 .filter-form-box {
@@ -139,7 +139,7 @@ h2{
 	max-height: auto;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 	background: rgb(74,171,218);
-	background: linear-gradient(180deg, rgba(74,171,218,1) 0%, rgba(31,240,240,1) 67%); 
+	background: linear-gradient(180deg, rgba(74,171,218,1) 0%, rgba(31,240,240,1) 67%);
 }
 .filter-container {
 	margin: 5px;
@@ -160,7 +160,7 @@ h2{
 	margin-top: 10%;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 	background: rgb(237,64,251);
-	background: linear-gradient(180deg, rgba(237,64,251,1) 0%, rgba(140,0,255,1) 67%); 
+	background: linear-gradient(180deg, rgba(237,64,251,1) 0%, rgba(140,0,255,1) 67%);
 }
 form .settings-form{
 	padding: 5px;
@@ -171,10 +171,10 @@ form .settings-form{
 	margin: 5px;
 
 }
-/* FILTER RESULTS CSS 
-	Flexbox is being used to dynamically wrap each individual result 
-		card as the user resizes the screen width. 
-		This is primarily for mobile users, but it also prevents 
+/* FILTER RESULTS CSS
+	Flexbox is being used to dynamically wrap each individual result
+		card as the user resizes the screen width.
+		This is primarily for mobile users, but it also prevents
 		the content of the website from being out of sight.
 */
 .flex-parent{ /* parent container that holds all of our result card */
@@ -190,7 +190,7 @@ form .settings-form{
 	justify-content: center;
     padding: 0px;
     margin: 5px;
-	height: 250px; 
+	height: 250px;
 	width: 300px;
     position: sticky;
     border-color: #000; /* result card border color */
@@ -220,7 +220,7 @@ form .settings-form{
 	margin-top: 10%;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
  	background: rgb(178,146,255);
-	background: linear-gradient(0deg, rgba(178,146,255,1) 0%, rgba(208,69,255,1) 67%); 
+	background: linear-gradient(0deg, rgba(178,146,255,1) 0%, rgba(208,69,255,1) 67%);
 }
 .about-us h1{
 	text-align: center;
@@ -253,22 +253,14 @@ form .settings-form{
 	border-width: 1px;
 	border-radius: 1rem;
 	width: 600px;
-	height: 70%;
+	height: auto;
 	margin: auto;
 	margin-top: 10%;
+	margin-bottom: 10%;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
  	background: rgb(178,146,255);
-	background: linear-gradient(0deg, rgba(178,146,255,1) 0%, rgba(208,69,255,1) 67%); 
+	background: linear-gradient(0deg, rgba(178,146,255,1) 0%, rgba(208,69,255,1) 67%);
 }
 .add-recipe-box h4, p, input{
 	text-align: center;
 }
-
-
-
-
-
-
-
-
-
