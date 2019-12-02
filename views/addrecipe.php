@@ -68,6 +68,97 @@
             <h4>Short description of recipe</h4>
 			<input class="form-control" name="description">
 
+<<<<<<< HEAD
+                        <!-- URL OF IMAGE FOR RECIPE -->
+						<input name="recipeimg">						
+
+						<!-- MEATS SELECTIONS -->
+						<h4>MEATS</h4>
+						<div style="padding: 5%" class="form-row">
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="1" type="checkbox" class="custom-control-input" id="steak">
+								    <label class="custom-control-label" for="steak">Steak</label>
+								</div>
+							</div>
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="2" type="checkbox" class="custom-control-input" id="chicken">
+								    <label class="custom-control-label" for="chicken">Chicken</label>
+								</div>
+							</div>
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="3" type="checkbox" class="custom-control-input" id="salmon">
+								    <label class="custom-control-label" for="salmon">Salmon</label>
+								</div>
+							</div>		
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="4" type="checkbox" class="custom-control-input" id="pork">
+								    <label class="custom-control-label" for="pork">Pork</label>
+								</div>
+							</div>
+						</div>
+						<!-- VEGETABLES SELECTIONS -->
+						<h4>VEGETABLES</h4>
+						<div style="padding: 5%" class="form-row">
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="5" type="checkbox" class="custom-control-input" id="green_beans">
+								    <label class="custom-control-label" for="green_beans">Green Beans</label>
+								</div>
+							</div>
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="6" type="checkbox" class="custom-control-input" id="brussel_sprouts">
+								    <label class="custom-control-label" for="brussel_sprouts">Brussel Sprouts</label>
+								</div>
+							</div>
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="7" type="checkbox" class="custom-control-input" id="zuccinni">
+								    <label class="custom-control-label" for="zuccinni">Zuccinni</label>
+								</div>
+							</div>
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="8" type="checkbox" class="custom-control-input" id="eggplant">
+								    <label class="custom-control-label" for="eggplant">Eggplant</label>
+								</div>
+							</div>
+						</div>
+						<!-- SPICES SELECTIONS -->
+						<h4>SPICES</h4>
+						<div style="padding: 5%" class="form-row">
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="9" type="checkbox" class="custom-control-input" id="salt">
+								    <label class="custom-control-label" for="salt">Salt</label>
+								</div>
+							</div>
+							<div class="form-column" style="padding: 5px">
+								<div class="custom-control custom-checkbox">
+								    <input name="check_list[]" value="10" type="checkbox" class="custom-control-input" id="pepper">
+								    <label class="custom-control-label" for="pepper">Pepper</label>
+								</div>
+							</div>
+						</div>
+						<!-- SUBMIT BUTTON -->
+						<div style="text-align:center" class="form-group">
+	                    	<input name="send" type="submit" class="btnSubmit" value="Submit" />
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- RIGHT COLUMN -->
+			<div class="flex-column">
+				<?php
+					if(isset($_POST['send'])){
+						include'actions/addrecipe_action.php';
+					}
+				?>
+=======
             <!-- URL FOR RECIPE -->
             <h4>Link to recipe</h4>
 			<input class="form-control" name="recipeURL">
@@ -82,6 +173,7 @@
 			<!-- SUBMIT BUTTON -->
 			<div style="text-align:center" class="form-group">
             	<input name="send" type="submit" class="btnSubmit" value="Submit" />
+>>>>>>> 6c194c6b50b5b24c311b678aba8ea0c96add25bc
 			</div>
 		</form>
 	</div>
