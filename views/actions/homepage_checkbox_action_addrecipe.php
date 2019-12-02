@@ -30,7 +30,6 @@
 	*/
 	echo '<h4>MEATS</h4>';
 	echo '<div style="padding: 5%" class="form-row">';
-	if($_SESSION['vegetarian'] == 0){
 		if(mysqli_num_rows($meat_result) > 0){
 			while($row = mysqli_fetch_array($meat_result)){
 				echo '<div style="margin-left: 5px;" class="custom-control custom-checkbox">';
@@ -40,13 +39,6 @@
 			}
 			echo '</div>';
 		}
-	}
-	else{
-		// info box that says: "Meats disabled in settings."
-		echo '<div class="alert alert-warning" role="alert">
-  				Meats disabled in settings.
-				</div></div>';
-	}
 	echo '<br>';
 
 	/* - VEGETABLES SECTION -
