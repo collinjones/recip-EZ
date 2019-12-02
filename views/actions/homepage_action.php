@@ -51,12 +51,18 @@
 	else{
 		$exclusion_string = '-1';
 	}
+	/* MAIN FILTER QUERY 
+		This section is the query for the filter.
+		The filter will return results in order of how many ingredients
+			were in a certain recipe.
+	*/
 	$recipe_query = "SELECT *, Count(*) as 'Likeness'
 					    FROM Recipes R, (SELECT * FROM Ingredients WHERE IngredientCode in ($ingredient_string)) I #List of selected Ingredients
 					    WHERE R.RecipeID = I.RecipeID AND R.RecipeID NOT IN (SELECT RecipeID FROM Ingredients WHERE IngredientCode in ($exclusion_string)) #Exclusion list
 					    GROUP BY RecipeURL
 					    ORDER BY Likeness desc";
 	$result = mysqli_query($conn, $recipe_query) or die(mysqli_error($conn));
+
 	if(mysqli_num_rows($result) > 0){
 		while($row = mysqli_fetch_array($result)) {
 			$recipeName = $row['RecipeName'];

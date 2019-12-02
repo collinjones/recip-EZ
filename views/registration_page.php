@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    session_start(); // session start. must be on pages that use php session data such as "$_SESSION['user']".
+    ob_start(); // output buffering start. must be on pages that use header redirects. 
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -17,13 +18,13 @@
 
 </head>
 <!-------- CONTENT STARTS HERE --------------->
-<body>
+<body onload="checkPass();">
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+        <script type="text/javascript" src="../resources/js/pwd_check_script.js"></script>
         <a href="homepage.php" class="navbar-brand">Recip-Ez</a>
         <?php 
         if(isset($_SESSION["loggedin"])){
@@ -53,11 +54,21 @@
                         <input name="username" type="text" class="form-control" placeholder="username" />
                     </div>
                     <div class="form-group">
-                        <input name="password_1" type="password" class="form-control" placeholder="password" />
+                        <input id="psw" name="password_1" type="password" class="form-control" placeholder="password" />
                     </div>
                     <div class="form-group">
-                        <input name="password_2" type="password" class="form-control" placeholder="confirm password" />
+                        <input id="cpsw" name="password_2" type="password" class="form-control" placeholder="confirm password" />
                     </div>
+                    <!-- Password requirements -->
+                   <div id="message" style="display:block">
+                        <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                            <p id="match" class="invalid">Password and Confirm Password Match</p>
+                    </div>
+
                     <!-- PHP Error checking for account creation -->
                     <?php
                         if(isset($_GET['error_emptyUser'])==true){

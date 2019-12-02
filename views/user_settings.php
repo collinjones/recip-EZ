@@ -77,7 +77,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="settings-box">
-				<form method="post" name="settings_form">
+				<form method="post" style="padding:5px; "name="settings-form">
 					<div class="form-group">
 						<h2>Change Username</h2>
 						<input id="username" name="newUsername" type="text" class="form-control" placeholder=''/>

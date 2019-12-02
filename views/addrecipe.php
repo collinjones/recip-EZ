@@ -51,21 +51,19 @@
 	</nav>
 
 	<!-- MIDDLE CONTENT -->
-    <div class="filter-container">
-		<div class="row">
-			<!-- LEFT COLUMN -->
-			<div class="flex-column">
-				<div class="filter-form-box">
-					<form class="filter-form" method="post" action="">
-						<!-- TITLE OF RECIPE -->
-						<input name="recipeName">
-                        
-                        <!-- DECRIPTION OF RECIPE -->
-						<input name="description">
+	<div class="add-recipe-box">
+		<form method="post" action="">
 
-                        <!-- URL FOR RECIPE -->
-						<input name="recipeURL">
+			<!-- TODO: Add limiters so users cannot break these forms -->
+			<!-- TITLE OF RECIPE -->
+			<h4>Name of recipe</h4>
+			<input class="form-control" name="recipeName">
+            
+            <!-- DECRIPTION OF RECIPE -->
+            <h4>Short description of recipe</h4>
+			<input class="form-control" name="description">
 
+<<<<<<< HEAD
                         <!-- URL OF IMAGE FOR RECIPE -->
 						<input name="recipeimg">						
 
@@ -155,8 +153,24 @@
 						include'actions/addrecipe_action.php';
 					}
 				?>
+=======
+            <!-- URL FOR RECIPE -->
+            <h4>Link to recipe</h4>
+			<input class="form-control" name="recipeURL">
+
+            <!-- URL OF IMAGE FOR RECIPE -->
+            <h4>URL of image for recipe</h4>
+            <p>right click an image and click save target location</p>
+            <input class="form-control" name="imgURL">
+
+			<?php include'actions/homepage_checkbox_action_addrecipe.php';?>
+
+			<!-- SUBMIT BUTTON -->
+			<div style="text-align:center" class="form-group">
+            	<input name="send" type="submit" class="btnSubmit" value="Submit" />
+>>>>>>> 6c194c6b50b5b24c311b678aba8ea0c96add25bc
 			</div>
-		</div>	
+		</form>
 	</div>
 
     <!-- FOOTER -->
@@ -166,3 +180,9 @@
     
 </body>
 </html>
+
+<?php
+					if(isset($_POST['send'])){
+						include'actions/addrecipe_action.php';
+					}
+				?>
