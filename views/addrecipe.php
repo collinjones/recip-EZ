@@ -57,21 +57,21 @@
 			<!-- TODO: Add limiters so users cannot break these forms -->
 			<!-- TITLE OF RECIPE -->
 			<h4>Name of recipe</h4>
-			<input class="form-control" name="recipeName">
-            
+			<input style="margin: 0 auto; width: 50%"  class="form-control" name="recipeName">
+            <br>
             <!-- DECRIPTION OF RECIPE -->
             <h4>Short description of recipe</h4>
-			<input class="form-control" name="description">
-
+			<input style="margin: 0 auto; width: 50%"  class="form-control" name="description">
+			<br>
             <!-- URL FOR RECIPE -->
             <h4>Link to recipe</h4>
-			<input class="form-control" name="recipeURL">
-
+			<input style="margin: 0 auto; width: 50%"  class="form-control" name="recipeURL">
+			<br>
             <!-- URL OF IMAGE FOR RECIPE -->
             <h4>URL of image for recipe</h4>
-            <p>right click an image and click save target location</p>
-            <input class="form-control" name="imgURL">
-
+            <p>right click an image, click save target location, paste here</p>
+            <input style="margin: 0 auto; width: 50%" class="form-control" name="imgURL">
+            <br>
 			<?php include'actions/homepage_checkbox_action_addrecipe.php';?>
 
 			<!-- SUBMIT BUTTON -->

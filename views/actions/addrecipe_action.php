@@ -25,7 +25,7 @@ if(!empty($_POST['check_list']))
     $recipeURL = $_POST['recipeURL'];
 
     //load recipe image
-    $recipeimg = $_POST['recipeimg'];
+    $recipeimg = $_POST['imgURL'];
 
     //push recipe url, recipe name, recipe description and number of ingredients to recipes table
     $addMeta_query = "INSERT INTO recipes (RecipeURL,TotalIngredients,RecipeName,RecipeDescription,RecipePictureURL) 
