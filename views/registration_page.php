@@ -1,6 +1,5 @@
 <?php
-    session_start(); // session start. must be on pages that use php session data such as "$_SESSION['user']".
-    ob_start(); // output buffering start. must be on pages that use header redirects. 
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -71,21 +70,21 @@
 
                     <!-- PHP Error checking for account creation -->
                     <?php
-                        if(isset($_GET['error_emptyUser'])==true){
-                            echo '<font color="#FF0000"><p> Username is required </p></font color>';
-                        }
-                        if(isset($_GET['error_emptyPass'])==true){
-                            echo '<font color="#FF0000"><p> Password is required </p></font color>';
-                        }
-                        if(isset($_GET['error_missmatch'])==true){
-                            echo '<font color="#FF0000"><p> Passwords do not match </p></font color>';
-                        }
-                        if(isset($_GET['error_exists'])==true){
-                            echo '<font color="#FF0000"><p> Username already exists </p></font color>';
-                        }
-                        if(isset($_GET['error_match'])==true){
-                            echo '<font color="#FF0000"><p> Username and Password cannot match! </p></font color>';
-                        }
+                        // if(isset($_GET['error_emptyUser'])==true){
+                        //     echo '<font color="#FF0000"><p> Username is required </p></font color>';
+                        // }
+                        // if(isset($_GET['error_emptyPass'])==true){
+                        //     echo '<font color="#FF0000"><p> Password is required </p></font color>';
+                        // }
+                        // if(isset($_GET['error_missmatch'])==true){
+                        //     echo '<font color="#FF0000"><p> Passwords do not match </p></font color>';
+                        // }
+                        // if(isset($_GET['error_exists'])==true){
+                        //     echo '<font color="#FF0000"><p> Username already exists </p></font color>';
+                        // }
+                        // if(isset($_GET['error_match'])==true){
+                        //     echo '<font color="#FF0000"><p> Username and Password cannot match! </p></font color>';
+                        // }
                     ?>
                     <div style="text-align:center" class="form-group">
                         <input name="send" type="submit" class="btnSubmit" value="Submit" />
