@@ -51,7 +51,7 @@
 	else{
 		$exclusion_string = '-1';
 	}
-	/* MAIN FILTER QUERY 
+	/* MAIN FILTER QUERY
 		This section is the query for the filter.
 		The filter will return results in order of how many ingredients
 			were in a certain recipe.
@@ -67,6 +67,8 @@
 		while($row = mysqli_fetch_array($result)) {
 			$recipeName = $row['RecipeName'];
 			$recipeURL = $row['RecipeURL'];
+			$likeness = $row['Likeness'];
+			$totalIngredients = $row['TotalIngredients'];
 			$recipeDescription = $row['RecipeDescription'];
 			$recipePictureURL = $row['RecipePictureURL'];
 
@@ -79,6 +81,8 @@
 							echo '<div style="text-align:center" class="form-group link-buttons">
 										<a href="' . $recipeURL . '" class="btn-info" target="_blank">Link To Recipe</a>
 										</div>';
+							echo "<div class='container' style='text-align:right;padding-top:7%'> <h6> Matched " . $likeness . "/" .$totalIngredients . " Ingredients.
+							 </h6> </div>";
 				echo "</div></div></div>";
 		}
 	}
