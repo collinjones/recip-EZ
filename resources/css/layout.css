@@ -235,7 +235,7 @@ form .settings-form{
 }
 .valid:before {
   position: relative;
-  left: -35px;
+  left: -3px;
   content: '\2713';
 }
 .invalid {
@@ -243,7 +243,7 @@ form .settings-form{
 }
 .invalid:before {
   position: relative;
-  left: -35px;
+  left: -3px;
   content: '\00D7';
 }
 
