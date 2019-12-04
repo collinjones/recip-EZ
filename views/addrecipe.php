@@ -45,7 +45,11 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarMenu">
 			<ul class="navbar-nav ml-auto">
-				<!-- *NAVBAR LINKS GO HERE* -->
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="homepage.php" class="nav-link">Home</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="addrecipe.php" class="nav-link">Add Recipe </a> </li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="about.php" class="nav-link">About Us</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="user_settings.php" class="nav-link">Account Settings</a></li>
+				<li style="list-style-type: none;" class="nav-item"><a align="center" href="actions/logout_action.php" class="nav-link">Log Out</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -57,21 +61,21 @@
 			<!-- TODO: Add limiters so users cannot break these forms -->
 			<!-- TITLE OF RECIPE -->
 			<h4>Name of recipe</h4>
-			<input class="form-control" name="recipeName">
-            
+			<input style="margin: 0 auto; width: 50%"  class="form-control" name="recipeName">
+            <br>
             <!-- DECRIPTION OF RECIPE -->
             <h4>Short description of recipe</h4>
-			<input class="form-control" name="description">
-
+			<input style="margin: 0 auto; width: 50%"  class="form-control" name="description">
+			<br>
             <!-- URL FOR RECIPE -->
             <h4>Link to recipe</h4>
-			<input class="form-control" name="recipeURL">
-
+			<input style="margin: 0 auto; width: 50%"  class="form-control" name="recipeURL">
+			<br>
             <!-- URL OF IMAGE FOR RECIPE -->
             <h4>URL of image for recipe</h4>
-            <p>right click an image and click save target location</p>
-            <input class="form-control" name="imgURL">
-
+            <p>right click an image, click save target location, paste here</p>
+            <input style="margin: 0 auto; width: 50%" class="form-control" name="imgURL">
+            <br>
 			<?php include'actions/homepage_checkbox_action_addrecipe.php';?>
 
 			<!-- SUBMIT BUTTON -->
