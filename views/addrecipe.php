@@ -94,7 +94,7 @@
 </html>
 
 <?php
-					if(isset($_POST['send'])){
-						include'actions/addrecipe_action.php';
-					}
-				?>
+	if(isset($_POST['send'])){
+		include'actions/addrecipe_action.php';
+	}
+?>
